@@ -13,35 +13,36 @@
     <div>
         <div class="top-stats">
             <div class="time box">
-                <p>01:39</p>
+                <p id="time">01:39</p>
             </div>
             <div class="rounds box">
-                <p>3/10</p>
+                <p id="round">3/10</p>
             </div>
         </div>
     </div>
     <div class="curr-shape-window box">
-        <img class="curr-shape" src="./assets/shapes/triangle_pix.png">
+        <img class="curr-shape" id="currShapeImg" src="./assets/shapes/triangle_pix.png">
     </div>
 
     <div class="buttons">
         <div class="row">
-            <button class="shape-btn">
+            <button class="shape-btn" id="pentagonBtn">
                 <img src="./assets/shapes/pentagon_pix.png">
             </button>
-            <button class="shape-btn">
+            <button class="shape-btn" id="circleBtn">
                 <img src="./assets/shapes/circle_pix.png">
             </button>
         </div>
         <div class="row">
-            <button class="shape-btn">
+            <button class="shape-btn" id="triangleBtn">
                 <img src="./assets/shapes/triangle_pix.png">
             </button>
-            <button class="shape-btn">
+            <button class="shape-btn" id="squareBtn">
                 <img src="./assets/shapes/square_pix.png">
             </button>
         </div>
     </div>
+    <script src="./js/mainGameplay.js"></script>
 </body>
 
 </html>
