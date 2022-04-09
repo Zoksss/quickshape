@@ -10,38 +10,64 @@
 </head>
 
 <body>
-    <div>
-        <div class="top-stats">
-            <div class="time box">
-                <p id="time">01:39</p>
-            </div>
-            <div class="rounds box">
-                <p id="round">3/10</p>
+    
+    <section class="gameplay" id="gameplayScreen">
+        <div class="counting">
+            <p id="startCounter">3</p>
+        </div>
+        <div>
+            <div class="top-stats">
+                <div class="time box">
+                    <p id="time">0.00</p>
+                    <p class="plustime" id="plustime">+1.5</p>
+                </div>
+                <div class="rounds box">
+                    <p id="round">0/10</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="curr-shape-window box">
-        <img class="curr-shape" id="currShapeImg" src="./assets/shapes/triangle_pix.png">
-    </div>
+        <div class="curr-shape-window box">
+            <img class="curr-shape" id="currShapeImg" src="">
+        </div>
 
-    <div class="buttons">
-        <div class="row">
-            <button class="shape-btn" id="pentagonBtn">
-                <img src="./assets/shapes/pentagon_pix.png">
-            </button>
-            <button class="shape-btn" id="circleBtn">
-                <img src="./assets/shapes/circle_pix.png">
-            </button>
+        <div class="buttons">
+            <div class="row">
+                <button class="shape-btn" id="pentagonBtn">
+                    <img src="./assets/shapes/pentagon_pix.png">
+                </button>
+                <button class="shape-btn" id="circleBtn">
+                    <img src="./assets/shapes/circle_pix.png">
+                </button>
+            </div>
+            <div class="row">
+                <button class="shape-btn" id="triangleBtn">
+                    <img src="./assets/shapes/triangle_pix.png">
+                </button>
+                <button class="shape-btn" id="squareBtn">
+                    <img src="./assets/shapes/square_pix.png">
+                </button>
+            </div>
         </div>
-        <div class="row">
-            <button class="shape-btn" id="triangleBtn">
-                <img src="./assets/shapes/triangle_pix.png">
-            </button>
-            <button class="shape-btn" id="squareBtn">
-                <img src="./assets/shapes/square_pix.png">
-            </button>
+    </section>
+    
+    <section class="end-screen" id="endScreen">
+        <p class="end-screen-average-round-time-title">AVERAGE TIME</p>
+        <p class="end-screen-average-round-time" id="currRoundAverage">0.00</p>
+        <p class="end-screen-best-time-title">BEST TIME</p>
+        <p class="end-screen-best-time">0.00</p>
+        <div class="underline"></div>
+        <div class="coins">
+            <img class="coin-icon" src="./assets/coin_icon.png">
+            <p class="coin-value">+10</p>
         </div>
-    </div>
+        <div class="underline"></div>
+        <button class="replay" id="playAgainBtn"><img class="play-again" src="./assets/play_again.png"></button>
+        <button class="go-back"><p>MENU</p></button>
+
+
+    </section>
+    <script src="./js/functions.js"></script>
+    <script src="./js/sceneManager.js"></script>
     <script src="./js/mainGameplay.js"></script>
 </body>
 

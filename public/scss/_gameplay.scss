@@ -1,0 +1,190 @@
+@font-face {
+    font-family: "Joystix";
+    src: url("/public/assets/joystix\ monospace.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+body{
+    height: 100vh;
+    background-image: url("/public/assets/plain_back.png");
+    background-size: 100% 100%;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    padding: 20px 10px;
+    max-width: 400px;
+    margin: auto;
+    font-family: "Joystix";
+    color: white;
+
+    .gameplay{
+        display: none;
+    }
+    
+    .counting{
+        position: absolute;
+        background: black;
+        opacity: 0.7;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1000;
+        p{
+            opacity: 1 !important;
+            font-size: 20vh;
+            text-align: center;
+            position: absolute;
+            top: 27%;
+            left: 50%;
+            transform: translate(-50%,-27%);
+        }
+    }
+
+    .box{
+        background-color: gray;
+        outline: none;
+    }
+
+    .top-stats{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 8vh;
+        .time, .rounds{
+            width: 42%;
+            height: 80%;
+            margin: 0 5px;
+            background-image: url("/public/assets/top_nav_basic_n.png");
+            background-position: center;
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            p{
+                text-align: center;
+                font-size: 3.7vh;
+            }
+            .plustime{
+                position: absolute;
+                top: 100%;
+                left: 20%;
+                color: red;
+                display: none;
+            }
+            .plustimeAnim{
+                animation: plus1dot5Anim 250ms linear;
+                display: flex;
+            }
+        }
+    }
+
+    @keyframes plus1dot5Anim {
+        0% {
+            top: 100%;
+            left: 20%;
+            opacity: 1;
+        }
+      
+        100% {
+            top: 35%;
+            left: 25%;
+            opacity: 1;
+        }
+
+      }
+
+
+      @keyframes shake {
+        0% { transform: translate(-52%,-28%) rotate(0deg); }
+        20% { transform:  translate(-50%,-27%) rotate(-2deg); }
+        40% { transform:  translate(-51%,-26%) rotate(1deg); }
+        60% { transform: translate(-53%,-27%) rotate(0deg); }
+        80% { transform: translate(-52%,-28%) rotate(2deg); }
+        100% { transform: translate(-50%,-27%) rotate(-3deg); }
+      }
+
+      .shake{
+        animation: shake 500ms linear;
+        }
+
+    @keyframes slide {
+        0% { 
+            left: 0;
+         }
+        100%{
+            left: -200vw; 
+        }
+      }
+
+      .slide{
+        animation: slide 150ms linear;
+        }
+    
+
+
+
+    .curr-shape-window{
+        width: 85%;
+        height: 42vh;
+        margin: 10px auto;
+        background-image: url("/public/assets/center_field_basic_n.png");
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: none;
+        outline: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .curr-shape{
+            width: 70%;
+        }
+    }
+    .buttons{
+        height: 40vh;
+        width: 88%;
+        margin: 15px auto;
+        .row{
+            width: 100%;
+            display: flex;
+            button{
+                background-color: transparent;
+                width: 50%;
+                height: 18vh;
+                margin: 8px 8px;
+                background-image: url("/public/assets/btn_basic_basic_n.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                outline: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-position: center;
+                transition: 100ms all ease;
+
+                &:hover{
+                    img{
+                        width: 78%;
+                        height: 78%;
+                    }
+                }
+                img{
+                    transition: 100ms all ease;
+                    width: 70%;
+                    height: 70%;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}

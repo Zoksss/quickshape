@@ -6,77 +6,44 @@ const squareBtn = document.querySelector("#squareBtn");
 const currShapeImg = document.querySelector("#currShapeImg");
 const time = document.querySelector("#time");
 const round = document.querySelector("#round");
+const roundplustime = document.querySelector("#plustime");
+
+const startCounter = document.querySelector("#startCounter");
+const currRoundAverage = document.querySelector("#currRoundAverage");
 
 let currRound = 0;
 let prevShape = null;
-
-const gameSettings = {
-    rounds: 10,
-    missTime: 1.5
-};
+let currShape = null;
 
 
-let timeBegan = null
-    , timeStopped = null
-    , stoppedDuration = 0
-    , started = null;
-
+let timeBegan = null, timeStopped = null, stoppedDuration = 0, started = null;
 let currentTime, timeElapsed, min, sec, ms;
+let timeString;
 
+let add = false;
 
 let times = [];
 
+let shapes = [{ name: "pentagon", src: "./assets/shapes/pentagon_pix.png" }, { name: "circle", src: "./assets/shapes/circle_pix.png" }, { name: "triangle", src: "./assets/shapes/triangle_pix.png" }, { name: "square", src: "./assets/shapes/square_pix.png" },]
 
-
-let shapes = [
-    {
-        name: "pentagon",
-        src: "./assets/shapes/pentagon_pix.png"
-    },
-    {
-        name: "circle",
-        src: "./assets/shapes/circle_pix.png"
-    },
-    {
-        name: "triangle",
-        src: "./assets/shapes/triangle_pix.png"
-    },
-    {
-        name: "square",
-        src: "./assets/shapes/square_pix.png"
-    },
-]
-
-const generateRandomShape = () => {
-    currRound++;
-    round.innerHTML = currRound + "/" + gameSettings.rounds;
-    let num = getRandomInt(4);
-    if (shapes[num].name != prevShape) {
-        prevShape = shapes[num].name;
-        currShapeImg.src = shapes[num].src;
-    } else {
-        num = (num == 3) ? 0 : 3;
-        prevShape = shapes[num].name;
-        currShapeImg.src = shapes[num].src;
-    }
-}
 
 pentagonBtn.addEventListener("click", () => {
+    checkIsCorrect("pentagon");
     console.log("Pentagon Clicked");
-    timerReset();
-    generateRandomShape();
-    console.table(times);
-    timerStart();
 });
 
 circleBtn.addEventListener("click", () => {
     console.log("Circle Clicked");
+    checkIsCorrect("circle");
+
 });
 triangleBtn.addEventListener("click", () => {
     console.log("Triangle Clicked");
+    checkIsCorrect("triangle");
 });
 squareBtn.addEventListener("click", () => {
     console.log("Square Clicked");
+    checkIsCorrect("square");
 });
 
 
@@ -89,30 +56,123 @@ const timerStart = () => {
 const timerReset = () => {
     clearInterval(started);
     stoppedDuration = 0;
-    timeBegan = null;
-    timeStopped = null;
+    timeBegan = timeStopped = null;
+    if (add) {
+        let privDate = new Date(timeElapsed.getUTCSeconds() * 1000 + timeElapsed.getUTCMilliseconds() + 1500);
+        sec = privDate.getUTCSeconds();
+        ms = privDate.getMilliseconds();
+    }
     times.push({ seconds: sec, milliseconds: (ms / 10).toFixed(0) });
 }
 
 const clockRunning = () => {
-    currentTime = new Date()
-        , timeElapsed = new Date(currentTime - timeBegan - stoppedDuration)
-        , sec = timeElapsed.getUTCSeconds()
-        , ms = timeElapsed.getUTCMilliseconds();
-    let secString = (sec > 9 ? sec : "0" + sec)
-        , milisString = (ms > 99 ? ms : ms > 9 ? "0" + ms : "00" + ms)
+    currentTime = new Date(), timeElapsed = new Date(currentTime - timeBegan - stoppedDuration), sec = timeElapsed.getUTCSeconds(), ms = timeElapsed.getUTCMilliseconds();
+    let secString = sec, milisString = (ms > 99 ? ms : ms > 9 ? "0" + ms : "00" + ms)
     timeString = secString + "." + ((ms < 100) ? "0" + (ms / 10).toFixed(0) : (ms / 10).toFixed(0));
     time.innerHTML = timeString;
     if (sec >= 59) pentagonBtn.click();
 };
 
-timerStart();
+const generateRandomShape = () => {
+    currRound++;
+    round.innerHTML = currRound + "/" + 10;
+    let num = getRandomInt(4);
+    if (shapes[num].name != prevShape) {
+        prevShape = shapes[num].name;
+        currShapeImg.src = shapes[num].src;
+        currShape = shapes[num].name;
+    } else {
+        num = (num == 3) ? 0 : 3;
+        prevShape = shapes[num].name;
+        currShapeImg.src = shapes[num].src;
+        currShape = shapes[num].name;
+    }
+}
+
+const checkIsCorrect = (shape) => {
+    if (shape === currShape) add = false;
+    else {
+        add = true;
+        roundplustime.classList.remove("plustimeAnim");
+        roundplustime.classList.add("plustimeAnim");
+        roundplustime.addEventListener('animationend', () => { roundplustime.classList.remove("plustimeAnim"); });
+    }
+    timerReset();
+    if (currRound !== 10) {
+        generateRandomShape();
+        timerStart();
+    } else {
+        currRoundAverage.innerHTML = calculateAverage();
+        endScreen.style.display = "flex";
+        gameplayScreen.style.display = "none";
+        // calculate times and coins
+    }
+};
 
 
 
+var test = null;
+const startGame = () => {
+    let step = 3;
+    resetGameplayParamters();
+    startCounter.parentElement.classList.remove("slide");
+    startCounter.innerHTML = step;
+    startCounter.classList.add("shake");
+    startCounter.addEventListener('animationend', () => { startCounter.classList.remove("shake"); });
+
+    test = setInterval(() => {
+        step--;
+        startCounter.innerHTML = step;
+        console.log(step);
+        startCounter.classList.add("shake");
+        startCounter.addEventListener('animationend', () => { startCounter.classList.remove("shake"); });
+        if (step == 0) {
+            console.log("test")
+            clearInterval(test);
+            startCounter.parentElement.classList.add("slide");
+            setTimeout(() => {
+                startCounter.parentElement.classList.remove("slide"); startCounter.parentElement.style.display = "none";
+            }, 130);
+            generateRandomShape();
+            timerStart();
+        }
+    }, 1000);
+}
 
 
 
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+const resetGameplayParamters = () => {
+    currShapeImg.src = "";
+    times = [];
+    currRound = 0;
+    prevShape = currShape = null;
+    round.innerHTML = currRound + "/" + "10";
+    time.innerHTML = "0.00";
+}
+
+
+const calculateAverage = () => {
+    let averageSeconds = 0, averageMilliseconds = 0;
+    let counter = 0;
+    for (let i = 0; i < 10; i++) {
+        averageSeconds += parseInt(times[i].seconds);
+        averageMilliseconds += parseInt(times[i].milliseconds);
+        counter++;
+    }
+    let allMillisecodns = averageMilliseconds + averageSeconds * 1000;
+    return msToTime(Math.round(allMillisecodns /= counter));
+}
+
+
+const msToTime = (s) => {
+    const pad = (n, z) => {
+        z = z || 2;
+        if (n == 0) return "";
+        return ('00' + n).slice(-z);
+    }
+    let ms = s % 1000;
+    s = (s - ms) / 1000;
+    let secs = s % 60;
+    s = (s - secs) / 60;
+    return secs + '.' + pad(ms, 3);
 }
