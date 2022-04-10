@@ -10,7 +10,9 @@
     outline: none;
     border: none;
 }
-
+html{
+    overflow-y: hidden !important;
+}
 body{
     height: 100vh;
     background-image: url("/public/assets/plain_back.png");
@@ -23,8 +25,11 @@ body{
     margin: auto;
     font-family: "Joystix";
     color: white;
+    position: relative;
 }
 
 
 @import "_gameplay";
 @import "_endscreen";
+@import "_menu";
+@import "_navigation";

@@ -1,0 +1,75 @@
+.main-menu{
+
+    .main-menu-nav{
+        .shop-page{
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 300ms all ease;
+            
+            background-size: 100% 100%;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+        .play-page{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 300ms all ease;
+            background: url("/public/assets/plain_back.png");
+            background-size: 100% 100%;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+        .inventory-page{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 300ms all ease;
+            background: url("/public/assets/plain_back.png");
+            background-size: 100% 100%;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+        .lower-nav{
+            position: absolute;
+            bottom: 0;
+            height: 13%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            button{
+                background: url("/public/assets/btn_basic_basic_n.png");
+                background-size: 100% 100%;
+                width: 30%;
+                height: 100%;
+                img{
+                    width: 40%;
+                }
+            }
+        }
+}
+}
