@@ -11,21 +11,47 @@
 
 <body>
     <section class="main-menu">
-       <div class="main-menu-nav">  
+        <div class="main-menu-nav">
             <div class="play-page" id="playPage">
-                Play
-                <div class="lower-nav">
-                    <button class="play"><img src="/public/assets/shapes/triangle_pix.png"></button>
-                    <button class="inventory"><img src="/public/assets/shapes/pentagon_pix.png"></button>
-                    <button class="shop"><img src="/public/assets/shapes/square_pix.png"></button>
+                <div class="main-menu-top-stats">
+                    <div class="main-menu-top-stats-left">
+                        <div class="nickname">
+                            <p>Zoksss</p>
+                        </div>
+                        <div class="stats">
+                            <div class="coins"><img src="/public/assets/coin_icon.png" alt="">
+                                <p>1 201</p>
+                            </div>
+                            <div class="gems"><img src="/public/assets/gem.png" alt="">
+                                <p>39</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>    
+                <div class="main-menu-top-stats-right">
+                    <button class="settings">S</button>
+                </div>
+                <button class="main-play">
+                    <img src="/public/assets/shapes/triangle_pix.png">
+                    <p>PLAY</p>
+                </button>
+                <button class="main-vs">
+                    <img src="/public/assets/shapes/pentagon_pix.png">
+                    <p>VS</p>
+                </button>
+
+                <div class="lower-nav">
+                    <button class="shop"><img src="/public/assets/shop.png"></button>
+                    <button class="play active"><img src="/public/assets/triangle_small.png"></button>
+                    <button class="inventory"><img src="/public/assets/backpack.png"></button>
+                </div>
+            </div>
             <div class="inventory-page" id="inventoryPage">
                 Inventory
             </div>
             <div class="shop-page" id="shopPage">
                 Shop
-            </div>  
+            </div>
         </div>
     </section>
     <section class="gameplay" id="gameplayScreen">
@@ -66,7 +92,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="end-screen" id="endScreen">
         <p class="end-screen-average-round-time-title">AVERAGE TIME</p>
         <p class="end-screen-average-round-time" id="currRoundAverage">0.00</p>
@@ -79,7 +105,9 @@
         </div>
         <div class="underline"></div>
         <button class="replay" id="playAgainBtn"><img class="play-again" src="./assets/play_again.png"></button>
-        <button class="go-back"><p>MENU</p></button>
+        <button class="go-back">
+            <p>MENU</p>
+        </button>
 
 
     </section>
