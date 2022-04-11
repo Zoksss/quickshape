@@ -43,38 +43,47 @@
         background-position: center;
         margin-top: 10%;
     }
-    .replay{
-        margin-top: 10%;
-        width: 60%;
-        height: 27%;
-        background: url("/public/assets/btn_basic_basic_n.png"); 
-        background-size: 100% 100%;   
-        background-position: center;
+    .end-screen-buttons{
+        width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
-            width: 40%;
-            aspect-ratio: 1.1/1;
-            pointer-events: none;
-        }
-    }
-    .go-back{
-        margin-top: 10%;
-        width: 60%;
+        position: absolute;
+        bottom: 30px;
         height: 15%;
-        background: url("/public/assets/btn_basic_basic_n.png"); 
-        background-size: 100% 100%;   
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        p{
-            font-size: 4vh;
-            font-family: "Joystix";
-            color: white;
-            -webkit-text-stroke: 1px black;
-            padding: 10px 5px;
+        .replay{
+            margin-top: 10%;
+            width: 60%;
+            height: 80%;
+            background: url("/public/assets/btn_basic_basic_n.png"); 
+            background-size: 100% 100%;   
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 40%;
+                aspect-ratio: 1.1/1;
+                pointer-events: none;
+            }
+        }
+        .go-back{
+            margin-top: 10%;
+            width: 60%;
+            height: 80%;
+            background: url("/public/assets/btn_basic_basic_n.png"); 
+            background-size: 100% 100%;   
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-size: 4vh;
+                font-family: "Joystix";
+                color: white;
+                -webkit-text-stroke: 1px black;
+                padding: 10px 5px;
+            }
         }
     }
 }

@@ -1,6 +1,10 @@
 .main-menu{
 
     .main-menu-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .shop-page{
             position: absolute;
             top: 0;
@@ -21,23 +25,23 @@
         .play-page{
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 90%;
             height: 100%;
-            background-color: red;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             transition: 300ms all ease;
-            background: url("/public/assets/plain_back.png");
+            //background: url("/public/assets/plain_back.png");
             background-size: 100% 100%;
             image-rendering: pixelated;
             image-rendering: -moz-crisp-edges;
             image-rendering: crisp-edges;
 
             .main-menu-top-stats{
-                width: 100%;
+                width: 80%;
                 position: absolute;
                 top: 20px;
                 left: 20px;
@@ -175,34 +179,36 @@
             image-rendering: crisp-edges;
         }
 
-        .lower-nav{
-            position: absolute;
-            bottom: 0;
-            height: 16%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            background-image: url("/public/assets/basic_menu_bar.png");
-            background-size: 100% 100%;
-            .active{
-                margin-top: -5px;
-                width: 35% !important;
-            }
-            button{
-                background-size: 100% 100%;
-                background-color: transparent;
-                width: 25%;
-                height: 100%;
-                margin-top: 25px;
-                img{
-                    width: 40%;
-                }
-            }
-            .shop{
-                width: 30%;
-                margin-left: -10px;
-            }
-        }
 }
+}
+
+.lower-nav{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url("/public/assets/basic_menu_bar.png");
+    background-size: 100% 100%;
+    .active{
+        margin-top: -5px;
+        width: 35% !important;
+    }
+    button{
+        background-size: 100% 100%;
+        background-color: transparent;
+        width: 25%;
+        height: 100%;
+        margin-top: 25px;
+        img{
+            width: 40%;
+        }
+    }
+    .shop{
+        width: 30%;
+        margin-left: -10px;
+    }
 }

@@ -1,12 +1,18 @@
 const endScreen = document.querySelector("#endScreen");
-const gameplayScreen = document.querySelector("#gameplayScreen");
+const gameplaySection = document.querySelector("#gameplaySection");
 
 
 const playAgainBtn = document.querySelector("#playAgainBtn");
 
 playAgainBtn.addEventListener("click", () => {
     endScreen.style.display = "none";
-    gameplayScreen.style.display ="block";
+    gameplaySection.style.display ="block";
     startCounter.parentElement.style.display = "flex";
     startGame();
+});
+
+goToMenuBtn.addEventListener("click", () => {
+    mainMenuSection.style.display = "flex";
+    endScreen.style.display = "none";
+    startCounter.parentElement.style.display = "flex";
 });

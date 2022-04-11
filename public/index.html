@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <section class="main-menu">
+    <section class="main-menu" id="mainMenuSection">
         <div class="main-menu-nav">
             <div class="play-page" id="playPage">
                 <div class="main-menu-top-stats">
@@ -31,7 +31,7 @@
                 <div class="main-menu-top-stats-right">
                     <button class="settings">S</button>
                 </div>
-                <button class="main-play">
+                <button class="main-play" id="startSingleplayerBtn">
                     <img src="/public/assets/shapes/triangle_pix.png">
                     <p>PLAY</p>
                 </button>
@@ -39,22 +39,22 @@
                     <img src="/public/assets/shapes/pentagon_pix.png">
                     <p>VS</p>
                 </button>
-
-                <div class="lower-nav">
-                    <button class="shop"><img src="/public/assets/shop.png"></button>
-                    <button class="play active"><img src="/public/assets/triangle_small.png"></button>
-                    <button class="inventory"><img src="/public/assets/backpack.png"></button>
-                </div>
             </div>
-            <div class="inventory-page" id="inventoryPage">
+            <!-- <div class="inventory-page" id="inventoryPage">
                 Inventory
             </div>
             <div class="shop-page" id="shopPage">
                 Shop
             </div>
+            -->
+            <div class="lower-nav">
+                <button class="shop"><img src="/public/assets/shop.png"></button>
+                <button class="play active"><img src="/public/assets/triangle_small.png"></button>
+                <button class="inventory"><img src="/public/assets/backpack.png"></button>
+            </div>
         </div>
     </section>
-    <section class="gameplay" id="gameplayScreen">
+    <section class="gameplay" id="gameplaySection">
         <div class="counting">
             <p id="startCounter">3</p>
         </div>
@@ -104,14 +104,16 @@
             <p class="coin-value">+10</p>
         </div>
         <div class="underline"></div>
-        <button class="replay" id="playAgainBtn"><img class="play-again" src="./assets/play_again.png"></button>
-        <button class="go-back">
-            <p>MENU</p>
-        </button>
-
+        <div class="end-screen-buttons">
+            <button id="goToMenuBtn" class="go-back">
+                <p>MENU</p>
+            </button>
+            <button class="replay" id="playAgainBtn"><img class="play-again" src="./assets/play_again.png"></button>
+            
+        </div>
 
     </section>
-    <script src="./js/navigation.js"></script>
+    <script src="./js/mainMenu.js"></script>
     <script src="./js/functions.js"></script>
     <script src="./js/sceneManager.js"></script>
     <script src="./js/mainGameplay.js"></script>

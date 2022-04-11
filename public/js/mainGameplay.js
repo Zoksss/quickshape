@@ -98,14 +98,15 @@ const checkIsCorrect = (shape) => {
         roundplustime.addEventListener('animationend', () => { roundplustime.classList.remove("plustimeAnim"); });
     }
     timerReset();
-    if (currRound !== 10) {
-        generateRandomShape();
-        timerStart();
-    } else {
+    if (currRound >= 10) {
+        timerReset();
         currRoundAverage.innerHTML = calculateAverage();
         endScreen.style.display = "flex";
-        gameplayScreen.style.display = "none";
+        gameplaySection.style.display = "none";
         // calculate times and coins
+    } else {
+        generateRandomShape();
+        timerStart();
     }
 };
 
@@ -142,6 +143,8 @@ const startGame = () => {
 
 
 const resetGameplayParamters = () => {
+    startCounter.parentElement.classList.remove("slide");
+    test = null;
     currShapeImg.src = "";
     times = [];
     currRound = 0;
