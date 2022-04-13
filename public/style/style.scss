@@ -3,18 +3,18 @@
     src: url("/public/assets/joystix\ monospace.ttf");
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
     border: none;
 }
-html{
-    overflow-y: hidden !important;
+html {
     overflow-x: hidden !important;
+    overflow-y: hidden !important;
 }
-body{
+body {
     height: 100vh;
     background-image: url("/public/assets/plain_back.png");
     background-size: 100% 100%;
@@ -29,8 +29,87 @@ body{
     position: relative;
 }
 
+.main-menu-top-stats {
+    width: 90%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    .nickname {
+        background-image: url("/public/assets/top_nav_basic_n.png");
+        width: 70%;
+        height: 6vh;
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        font-size: 2.7vh;
+    }
+
+    .stats {
+        display: flex;
+        margin-top: 10px;
+        .coins {
+            background-image: url("/public/assets/top_nav_basic_n.png");
+            width: 40%;
+            height: 5vh;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            img {
+                width: 35%;
+            }
+            p {
+                font-size: 2vh;
+            }
+        }
+        .gems {
+            background-image: url("/public/assets/top_nav_basic_n.png");
+            width: 30%;
+            height: 5vh;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            img {
+                width: 20%;
+                margin-right: 5px;
+            }
+            p {
+                font-size: 2vh;
+            }
+        }
+    }
+}
+
+
+.transition {
+    &::before{
+        pointer-events: none;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        animation: flash 0.4s ease-out;
+        z-index: 999999;
+        opacity: 0;
+    }
+}
+
+@keyframes flash {
+    0%   {opacity: 0;}
+    50%  {opacity: 1;}
+    70%  {opacity: 1;}
+    100%  { opacity: 0;}
+}
+
+
 
 @import "_gameplay";
 @import "_endscreen";
 @import "_menu";
 @import "_navigation";
+@import "_shop";

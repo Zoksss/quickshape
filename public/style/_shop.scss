@@ -1,0 +1,95 @@
+.main-menu {
+    .main-menu-nav {
+        .shop-page {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 90%;
+            height: 100%;
+            //display: flex;
+            //justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: 300ms all ease;
+            //background: url("/public/assets/plain_back.png");
+            background-size: 100% 100%;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            z-index: 20;
+            padding: 40px 0px;
+            display: none;
+            .title {
+                margin: 5px 0 40px 0;
+                font-size: 3vh;
+            }
+            .special-deal-container {
+                background-image: url("/public/assets/center_field_basic_n.png");
+                width: 100%;
+                height: 30%;
+                margin-top: 35%;
+                background-size: 100% 100%;
+                position: relative;
+                .special-deal {
+                    font-size: 2vh;
+                    text-align: center;
+                    margin-top: -7%;
+                }
+
+                .special-deal-price {
+                    position: absolute;
+                    bottom:3%;
+                    left: 50%;
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    transform: translate(-50%, 0);
+                    height: 12%;
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+            .theme-shop-title {
+                margin-top: 20px;
+            }
+            .themes-shop {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 25%;
+                margin-top: 20px;
+                button {
+                    width: 35%;
+                    margin: 20px 5px;
+                    height: 100%;
+                    background-image: url("/public/assets/placeholder.png");
+                    background-size: 100% 100%;
+                    position: relative;
+                    .theme-price {
+                        display: flex;
+                        position: absolute;
+                        justify-content: center;
+                        align-items: center;
+                        bottom: -18%;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        width: 100%;
+                        height: 15%;
+                        img{
+                            height: 100%;
+                        }
+                        p{
+                            font-family: "Joystix";
+                            color: white;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
