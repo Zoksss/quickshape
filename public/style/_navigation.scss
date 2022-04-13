@@ -1,27 +1,10 @@
 .main-menu{
-
     .main-menu-nav{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .shop-page{
-            position: absolute;
-            top: 0;
-            left: 100%;
-            width: 100%;
-            height: 100%;
-            background-color: red;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 300ms all ease;
-            
-            background-size: 100% 100%;
-            image-rendering: pixelated;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: crisp-edges;
-        }
+        overflow-x: hidden !important;
         .play-page{
             position: absolute;
             top: 0;
@@ -39,62 +22,8 @@
             image-rendering: pixelated;
             image-rendering: -moz-crisp-edges;
             image-rendering: crisp-edges;
-
-            .main-menu-top-stats{
-                width: 80%;
-                position: absolute;
-                top: 20px;
-                left: 20px;
-                width: 100%;
-                .main-menu-top-stats-left{
-                    .nickname{
-                        background-image: url("/public/assets/top_nav_basic_n.png");
-                        width: 70%;
-                        height: 6vh;
-                        background-size: 100% 100%;
-                        display: flex;
-                        align-items: center;
-                        padding: 0 20px;
-                        font-size: 2.7vh;
-                    }
+            overflow-x: hidden !important;
             
-                    .stats{
-                        display: flex;
-                        margin-top: 10px;
-                        .coins{
-                            background-image: url("/public/assets/top_nav_basic_n.png");
-                            width: 40%;
-                            height: 5vh;
-                            background-size: 100% 100%;
-                            display: flex;
-                            align-items: center;
-                            padding: 0 8px;
-                            img{
-                                width: 35%;
-                            }
-                            p{
-                                font-size: 2vh;
-                            }
-                        }
-                        .gems{
-                            background-image: url("/public/assets/top_nav_basic_n.png");
-                            width: 30%;
-                            height: 5vh;
-                            background-size: 100% 100%;
-                            display: flex;
-                            align-items: center;
-                            padding: 0 8px;
-                            img{
-                                width: 20%;
-                                margin-right: 5px;
-                            }
-                            p{
-                                font-size: 2vh;
-                            }
-                        }
-                    }
-                }
-            }
             
             .main-menu-top-stats-right{
                 position: absolute;
@@ -193,8 +122,10 @@
     width: 100%;
     background-image: url("/public/assets/basic_menu_bar.png");
     background-size: 100% 100%;
+    z-index: 100;
     .active{
         margin-top: -5px;
+        transition: 300ms all ease;
         width: 35% !important;
     }
     button{
