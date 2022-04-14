@@ -1,18 +1,19 @@
-.main-menu{
-    .main-menu-nav{
+.main-menu {
+    .main-menu-nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         overflow-x: hidden !important;
-        .play-page{
+        .play-page {
+            display: flex;
             position: absolute;
             top: 0;
             left: 50%;
             transform: translate(-50%, 0);
             width: 90%;
             height: 100%;
-            display: flex;
+            //display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
@@ -23,15 +24,14 @@
             image-rendering: -moz-crisp-edges;
             image-rendering: crisp-edges;
             overflow-x: hidden !important;
-            
-            
-            .main-menu-top-stats-right{
+
+            .main-menu-top-stats-right {
                 position: absolute;
                 top: 20px;
                 right: 15px;
                 width: 20%;
                 height: 12vh;
-                button{
+                button {
                     background-image: url("/public/assets/btn_basic_basic_n.png");
                     background-position: center;
                     background-size: 100% 100%;
@@ -40,8 +40,8 @@
                     height: 100%;
                 }
             }
-            
-            .main-play{
+
+            .main-play {
                 width: 85%;
                 height: 38vh;
                 margin: 10px auto;
@@ -55,17 +55,17 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                img{
+                img {
                     width: 20%;
                 }
-                p{
+                p {
                     font-family: "Joystix";
                     color: white;
                     font-size: 5vh;
                     margin-top: 15px;
                 }
             }
-            .main-vs{
+            .main-vs {
                 width: 50%;
                 height: 8vh;
                 margin: 10px auto;
@@ -78,40 +78,21 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                img{
+                img {
                     width: 25%;
                     margin-right: 10px;
                 }
-                p{
+                p {
                     font-family: "Joystix";
                     color: white;
                     font-size: 5vh;
                 }
             }
         }
-        .inventory-page{
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 100%;
-            width: 100%;
-            height: 100%;
-            background-color: green;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 300ms all ease;
-            background: url("/public/assets/plain_back.png");
-            background-size: 100% 100%;
-            image-rendering: pixelated;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: crisp-edges;
-        }
-
-}
+    }
 }
 
-.lower-nav{
+.lower-nav {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -123,22 +104,22 @@
     background-image: url("/public/assets/basic_menu_bar.png");
     background-size: 100% 100%;
     z-index: 100;
-    .active{
+    .active {
         margin-top: -5px;
         transition: 300ms all ease;
         width: 35% !important;
     }
-    button{
+    button {
         background-size: 100% 100%;
         background-color: transparent;
         width: 25%;
         height: 100%;
         margin-top: 25px;
-        img{
+        img {
             width: 40%;
         }
     }
-    .shop{
+    .shop {
         width: 30%;
         margin-left: -10px;
     }

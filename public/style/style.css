@@ -604,6 +604,9 @@ body .buttons .row button img {
 }
 
 .main-menu .main-menu-nav .play-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   top: 0;
   left: 50%;
@@ -611,9 +614,6 @@ body .buttons .row button img {
           transform: translate(-50%, 0);
   width: 90%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -637,7 +637,6 @@ body .buttons .row button img {
 }
 
 .main-menu .main-menu-nav .play-page .main-menu-top-stats-right {
-  overflow-x: hidden !important;
   position: absolute;
   top: 20px;
   right: 15px;
@@ -720,35 +719,6 @@ body .buttons .row button img {
   font-family: "Joystix";
   color: white;
   font-size: 5vh;
-}
-
-.main-menu .main-menu-nav .inventory-page {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  background-color: green;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: 300ms all ease;
-  transition: 300ms all ease;
-  background: url("/public/assets/plain_back.png");
-  background-size: 100% 100%;
-  -ms-interpolation-mode: nearest-neighbor;
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: -o-pixelated;
-      image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
 }
 
 .lower-nav {
@@ -922,5 +892,134 @@ body .buttons .row button img {
   font-family: "Joystix";
   color: white;
   margin-left: 5px;
+}
+
+.main-menu .main-menu-nav .inventory-page {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+  background-size: 100% 100%;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  z-index: 20;
+  padding: 40px 0px;
+  z-index: 99;
+}
+
+.main-menu .main-menu-nav .inventory-page .badge-section {
+  margin-top: 30%;
+  width: 90%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("/public/assets/center_field_basic_n.png");
+  background-size: 100% 100%;
+}
+
+.main-menu .main-menu-nav .inventory-page .badge-section .badge-section-title {
+  margin-top: 5%;
+}
+
+.main-menu .main-menu-nav .inventory-page .badge-section .badges {
+  margin-top: 5%;
+  width: 80%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-menu .main-menu-nav .inventory-page .badge-section .badges .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 67%;
+  margin-bottom: 3%;
+}
+
+.main-menu .main-menu-nav .inventory-page .badge-section .badges .row button {
+  height: 100%;
+  background: transparent;
+  margin-right: 6%;
+}
+
+.main-menu .main-menu-nav .inventory-page .badge-section .badges .row button img {
+  height: 100%;
+}
+
+.main-menu .main-menu-nav .inventory-page .themes-unlocked-value {
+  margin: 8% 0 5% 0;
+}
+
+.main-menu .main-menu-nav .inventory-page .inventory-themes-section {
+  overflow-y: scroll !important;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-menu .main-menu-nav .inventory-page .inventory-themes-section .themes-unlocked-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 21vh;
+  margin-bottom: 3%;
+}
+
+.main-menu .main-menu-nav .inventory-page .inventory-themes-section .themes-unlocked-row button {
+  background: transparent;
+  width: 100%;
+  margin: 0 3%;
+}
+
+.main-menu .main-menu-nav .inventory-page .inventory-themes-section .themes-unlocked-row button img {
+  width: 100%;
+}
+
+.main-menu .main-menu-nav .inventory-page .inventory-themes-section .scroll-helper {
+  margin-top: 50%;
 }
 /*# sourceMappingURL=style.css.map */

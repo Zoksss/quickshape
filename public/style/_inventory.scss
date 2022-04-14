@@ -1,0 +1,90 @@
+.main-menu {
+    .main-menu-nav {
+        .inventory-page {
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            //justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: 300ms all ease;
+            //background: url("/public/assets/plain_back.png");
+            background-size: 100% 100%;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            z-index: 20;
+            padding: 40px 0px;
+            z-index: 99;
+            .badge-section {
+                margin-top: 30%;
+                width: 90%;
+                height: 30%;
+                display: flex;
+                //justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: url("/public/assets/center_field_basic_n.png");
+                background-size: 100% 100%;
+                .badge-section-title {
+                    margin-top: 5%;
+                }
+                .badges {
+                    margin-top: 5%;
+                    width: 80%;
+                    height: 10vh;
+                    display: flex;
+                    flex-direction: column;
+                    .row {
+                        display: flex;
+                        height: 67%;
+                        //justify-content: space-between;
+                        margin-bottom: 3%;
+                        button {
+                            height: 100%;
+                            background: transparent;
+                            margin-right: 6%;
+                            img {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .themes-unlocked-value{
+                margin: 8% 0 5% 0;
+            }
+            .inventory-themes-section{
+                overflow-y: scroll !important;
+                width: 85%;
+                //padding-top: 25%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .themes-unlocked-row{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 21vh;
+                    margin-bottom: 3%;
+
+                    button{
+                        background: transparent;
+                        width: 100%;
+                        margin: 0 3%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .scroll-helper{
+                    margin-top: 50%;
+                }
+            }
+        }
+    }
+}

@@ -29,7 +29,7 @@
             <div class="play-page" id="playPage">
                 <div class="main-menu-top-stats">
                     <div class="main-menu-top-stats-left">
-                        
+
                     </div>
                 </div>
                 <div class="main-menu-top-stats-right">
@@ -44,10 +44,6 @@
                     <p>VS</p>
                 </button>
             </div>
-            <!-- <div class="inventory-page" id="inventoryPage">
-                Inventory
-            </div>
-            -->
             <div class="shop-page" id="shopPage">
                 <div class="special-deal-container">
                     <p class="special-deal">Special Deal</p>
@@ -83,11 +79,52 @@
                     </button>
                 </div>
             </div>
+            <div class="inventory-page" id="inventoryPage">
+                <div class="badge-section">
+                    <p class="badge-section-title">Your badges</p>
+                    <div class="badges">
+                        <div class="row">
+                            <button>
+                                <img src="/public/assets/coin_icon.png" alt="badge">
+                            </button>
+                            <button>
+                                <img src="/public/assets/coin_icon.png" alt="badge">
+                            </button>
+                            <button>
+                                <img src="/public/assets/coin_icon.png" alt="badge">
+                            </button>
+                            <button>
+                                <img src="/public/assets/coin_icon.png" alt="badge">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="themes-unlocked-value">Your themes  (5/84)</p>
+                <div class="inventory-themes-section">
+                    <div class="themes-unlocked-row">
+                        <button><img src="/public/assets/placeholder.png"></button>
+                        <button><img src="/public/assets/placeholder2.png"></button>
+                        <button><img src="/public/assets/placeholder2.png"></button>
+                    </div>
+                    <div class="themes-unlocked-row">
+                        <button><img src="/public/assets/placeholder.png"></button>
+                        <button><img src="/public/assets/placeholder2.png"></button>
+                        <button><img src="/public/assets/placeholder2.png"></button>
+                    </div>
+                    <div class="themes-unlocked-row">
+                        <button><img src="/public/assets/placeholder.png"></button>
+                        <button><img src="/public/assets/placeholder2.png"></button>
+                        <button><img src="/public/assets/placeholder2.png"></button>
+                    </div>
+                    <div class="scroll-helper"></div>
+                </div>
+            </div>
 
             <div class="lower-nav">
                 <button class="shop" id="navShopBtn"><img src="/public/assets/shop.png"></button>
                 <button class="play active" id="navPlayBtn"><img src="/public/assets/triangle_small.png"></button>
-                <button class="inventory"><img src="/public/assets/backpack.png"></button>
+                <button class="inventory" id="navInventorypBtn"><img src="/public/assets/backpack.png"></button>
             </div>
         </div>
     </section>
@@ -150,7 +187,6 @@
         </div>
     </section>
     <span id="transitionHolder"></span>
-    <script src="./js/mainMenu.js"></script>
     <script src="./js/functions.js"></script>
     <script src="./js/sceneManager.js"></script>
     <script src="./js/mainGameplay.js"></script>
