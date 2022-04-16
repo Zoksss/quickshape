@@ -12,14 +12,14 @@
 <body>
     <section class="main-menu" id="mainMenuSection">
         <div class="main-menu-top-stats">
-            <div class="nickname">
+            <div class="nickname" id="topNickname">
                 <p>Zoksss</p>
             </div>
             <div class="stats">
-                <div class="coins"><img src="/public/assets/coin_icon.png" alt="">
+                <div class="coins" id="topCoins"><img src="/public/assets/coin_icon.png" alt="">
                     <p>1 201</p>
                 </div>
-                <div class="gems"><img src="/public/assets/gem.png" alt="">
+                <div class="gems" id="topGems"><img src="/public/assets/gem.png" alt="">
                     <p>39</p>
                 </div>
             </div>
@@ -39,13 +39,13 @@
                     <img src="/public/assets/shapes/triangle_pix.png">
                     <p>PLAY</p>
                 </button>
-                <button class="main-vs">
+                <button class="main-vs" id="vsButton">
                     <img src="/public/assets/shapes/pentagon_pix.png">
                     <p>VS</p>
                 </button>
             </div>
             <div class="shop-page" id="shopPage">
-                <div class="special-deal-container">
+                <div class="special-deal-container" id="specialDealContainer">
                     <p class="special-deal">Special Deal</p>
                     <div class="special-deal-main">
                         <div class="special-deal-content">
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="inventory-page" id="inventoryPage">
-                <div class="badge-section">
+                <div class="badge-section" id="badgeSection">
                     <p class="badge-section-title">Your badges</p>
                     <div class="badges">
                         <div class="row">
@@ -121,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="lower-nav">
+            <div class="lower-nav" id="lowerNav">
                 <button class="shop" id="navShopBtn"><img src="/public/assets/shop.png"></button>
                 <button class="play active" id="navPlayBtn"><img src="/public/assets/triangle_small.png"></button>
                 <button class="inventory" id="navInventorypBtn"><img src="/public/assets/backpack.png"></button>
@@ -134,16 +134,16 @@
         </div>
         <div>
             <div class="top-stats">
-                <div class="time box">
+                <div class="time">
                     <p id="time">0.00</p>
                     <p class="plustime" id="plustime">+1.5</p>
                 </div>
-                <div class="rounds box">
+                <div class="rounds">
                     <p id="round">0/10</p>
                 </div>
             </div>
         </div>
-        <div class="curr-shape-window box">
+        <div class="curr-shape-window" id="currShapeWindow">
             <img class="curr-shape" id="currShapeImg" src="">
         </div>
 
@@ -177,6 +177,10 @@
             <img class="coin-icon" src="./assets/coin_icon.png">
             <p class="coin-value">+10</p>
         </div>
+        <div class="gems">
+            <img class="gems-icon" src="./assets/gem.png">
+            <p class="gem-value">+1</p>
+        </div>
         <div class="underline"></div>
         <div class="end-screen-buttons">
             <button id="goToMenuBtn" class="go-back">
@@ -190,6 +194,7 @@
     <script src="./js/functions.js"></script>
     <script src="./js/sceneManager.js"></script>
     <script src="./js/mainGameplay.js"></script>
+    <script src="./js/themeManager.js"></script>
 </body>
 
 </html>

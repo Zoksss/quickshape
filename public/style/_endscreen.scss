@@ -35,6 +35,20 @@
             font-size: 6vh;
         }
     }
+    .gems{
+        margin: 10% 0 0% 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        .gems-icon{
+            height: 90%;
+            margin-right: 5px;
+        }
+        .gem-value{
+            font-size: 6vh;
+        }
+    }
     .underline{
         height: 10px;
         width: 80%;

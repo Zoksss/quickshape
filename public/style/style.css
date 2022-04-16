@@ -17,6 +17,10 @@ html {
   overflow-y: hidden !important;
 }
 
+button {
+  background-color: transparent !important;
+}
+
 body {
   height: 100vh;
   background-image: url("/public/assets/plain_back.png");
@@ -511,6 +515,29 @@ body .buttons .row button img {
   font-size: 6vh;
 }
 
+.end-screen .gems {
+  margin: 10% 0 0% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.end-screen .gems .gems-icon {
+  height: 90%;
+  margin-right: 5px;
+}
+
+.end-screen .gems .gem-value {
+  font-size: 6vh;
+}
+
 .end-screen .underline {
   height: 10px;
   width: 80%;
@@ -726,6 +753,7 @@ body .buttons .row button img {
   bottom: 0;
   left: 0;
   height: 16%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
