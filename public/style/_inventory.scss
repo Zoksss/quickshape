@@ -11,7 +11,7 @@
             align-items: center;
             flex-direction: column;
             transition: 300ms all ease;
-            //background: url("/public/assets/plain_back.png");
+            //background: url("./assets/plain_back.png");
             background-size: 100% 100%;
             image-rendering: pixelated;
             image-rendering: -moz-crisp-edges;
@@ -27,7 +27,7 @@
                 //justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                background: url("/public/assets/center_field_basic_n.png");
+                background: url("./assets/center_field_basic_n.png");
                 background-size: 100% 100%;
                 .badge-section-title {
                     margin-top: 5%;

@@ -12,7 +12,7 @@
             align-items: center;
             flex-direction: column;
             transition: 300ms all ease;
-            //background: url("/public/assets/plain_back.png");
+            //background: url("./assets/plain_back.png");
             background-size: 100% 100%;
             image-rendering: pixelated;
             image-rendering: -moz-crisp-edges;
@@ -25,7 +25,7 @@
                 font-size: 3vh;
             }
             .special-deal-container {
-                background-image: url("/public/assets/center_field_basic_n.png");
+                background-image: url("./assets/center_field_basic_n.png");
                 width: 100%;
                 height: 32%;
                 margin-top: 35%;
@@ -102,7 +102,7 @@
                     width: 35%;
                     margin: 20px 5px;
                     height: 100%;
-                    background-image: url("/public/assets/placeholder.png");
+                    background-image: url("./assets/placeholder.png");
                     background-size: 100% 100%;
                     position: relative;
                     .theme-price {

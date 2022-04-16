@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Joystix";
-    src: url("/public/assets/joystix\ monospace.ttf");
+    src: url("./assets/joystix\ monospace.ttf");
 }
 
 *{
@@ -13,7 +13,7 @@
 
 body{
     height: 100vh;
-    background-image: url("/public/assets/plain_back.png");
+    background-image: url("./assets/plain_back.png");
     background-size: 100% 100%;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
@@ -64,7 +64,7 @@ body{
             width: 42%;
             height: 80%;
             margin: 0 5px;
-            background-image: url("/public/assets/top_nav_basic_n.png");
+            background-image: url("./assets/top_nav_basic_n.png");
             background-position: center;
             background-size: 100% 100%;
             display: flex;
@@ -138,7 +138,7 @@ body{
         width: 85%;
         height: 42vh;
         margin: 10px auto;
-        background-image: url("/public/assets/center_field_basic_n.png");
+        background-image: url("./assets/center_field_basic_n.png");
         background-position: center;
         background-size: 100% 100%;
         background-repeat: none;
@@ -163,7 +163,7 @@ body{
                 width: 50%;
                 height: 18vh;
                 margin: 8px 8px;
-                background-image: url("/public/assets/btn_basic_basic_n.png");
+                background-image: url("./assets/btn_basic_basic_n.png");
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
                 outline: none;
