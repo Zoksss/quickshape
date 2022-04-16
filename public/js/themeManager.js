@@ -13,7 +13,7 @@ class Theme {
 
         document.body.style.backgroundImage = `url("${this.backSRC}")`;
         document.querySelector("#lowerNav").style.backgroundImage = `url("${this.navSRC}")`;
-        document.querySelectorAll(".underline").forEach(e => {e.style.backgroundImage = `url("${this.lineSRC}")`});
+        document.querySelectorAll(".underline").forEach(e => { e.style.backgroundImage = `url("${this.lineSRC}")` });
         for (let i = 0; i < centerDOMArray.length; i++) {
             centerDOMArray[i].style.backgroundImage = `url("${this.centerSRC}")`;
             console.log(centerDOMArray[i]);
@@ -26,6 +26,47 @@ class Theme {
             btnDOMArray[i].style.backgroundImage = `url("${this.btnSRC}")`;
     }
 }
+
+let themes = {
+    basic: new Theme("Basic",
+        "./assets/themes/basic/back.png",
+        "./assets/themes/basic/center.png",
+        "./assets/themes/basic/btn.png",
+        "./assets/themes/basic/btn_wide.png",
+        "./assets/themes/basic/nav.png",
+        "./assets/themes/basic/top.png",
+        "./assets/themes/basic/line.png",
+    ),
+    science: new Theme("Science",
+        "./assets/themes/science/back.png",
+        "./assets/themes/science/center.png",
+        "./assets/themes/science/btn.png",
+        "./assets/themes/science/btn_wide.png",
+        "./assets/themes/science/nav.png",
+        "./assets/themes/science/top.png",
+        "./assets/themes/science/line.png",
+    ),
+    desert: new Theme("Desert",
+        "./assets/themes/desert/back.png",
+        "./assets/themes/desert/center.png",
+        "./assets/themes/desert/btn.png",
+        "./assets/themes/desert/btn_wide.png",
+        "./assets/themes/desert/nav.png",
+        "./assets/themes/desert/top.png",
+        "./assets/themes/desert/line.png",
+    ),
+    easter: new Theme("Easter 22",
+        "./assets/themes/easter22/back.png",
+        "./assets/themes/easter22/center.png",
+        "./assets/themes/easter22/btn.png",
+        "./assets/themes/easter22/btn_wide.png",
+        "./assets/themes/easter22/nav.png",
+        "./assets/themes/easter22/top.png",
+        "./assets/themes/easter22/line.png",
+    ),
+
+}
+
 
 
 let backDOMArray = [ // css back
@@ -63,14 +104,6 @@ let navDOMArray = [ // css back
     document.querySelector("#lowerNav"),
 ]
 
-const test2 = new Theme("tett",
-    "/public/assets/themes/desert/back.png",
-    "/public/assets/themes/desert/center.png",
-    "/public/assets/themes/desert/btn.png",
-    "/public/assets/themes/desert/btn_wide.png",
-    "/public/assets/themes/desert/nav.png",
-    "/public/assets/themes/desert/top.png",
-    "/public/assets/themes/desert/line.png",
-)
 
-test2.setTheme();
+
+themes.science.setTheme();
