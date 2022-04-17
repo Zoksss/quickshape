@@ -45,30 +45,28 @@
                 </button>
             </div>
             <div class="shop-page" id="shopPage">
-                <div class="special-deal-container" id="specialDealContainer">
-                    <p class="special-deal">Easter 22 Gift (limited)</p>
-                    <div class="special-deal-main">
-                        <div class="special-deal-content">
-                            <img src="./assets/themes_placeholders/easter22.png" alt="">
-                            <div class="special-deal-content-side">
-                                <div>
-                                    <img class="coin-deal"src="./assets/coin_icon.png">
-                                    <p>500</p>
-                                </div>
-                                <div>
-                                    <img src="./assets/gem.png">
-                                    <p>25</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="special-deal-price">
-                            <img src="./assets/coin_icon.png" alt="">
-                            <p>Free</p>
-                        </div>
-                    </div>
-                </div>
                 <p class="theme-shop-title">Daily shop</p>
-                <div class="themes-shop">
+                <div class="themes-shop" id="themesShop1">
+                    <button class="theme1">
+                        <div class="theme-price">
+                            <img src="./assets/coin_icon.png" alt="">
+                            <p id="shopThemePrice">1000</p>
+                        </div>
+                    </button>
+                    <button class="theme1 theme2">
+                        <div class="theme-price">
+                            <img src="./assets/coin_icon.png" alt="">
+                            <p id="shopThemePrice">1000</p>
+                        </div>
+                    </button>
+                    <button class="theme1">
+                        <div class="theme-price">
+                            <img src="./assets/gem.png" alt="">
+                            <p id="shopThemePrice">20</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="themes-shop2" id="themesShop2">
                     <button class="theme1">
                         <div class="theme-price">
                             <img src="./assets/coin_icon.png" alt="">
@@ -113,12 +111,12 @@
                 <p class="themes-unlocked-value">Your themes (5/84)</p>
                 <div class="inventory-themes-section">
                     <div class="themes-unlocked-row">
-                        <button><img src="./assets/themes_placeholders/desert.png"></button>
+                        <button><img src="./assets/themes_placeholders/basic.png"></button>
                         <button><img src="./assets/themes_placeholders/science.png"></button>
-                        <button><img src="./assets//themes_placeholders/easter22.png"></button>
+                        <button><img src="./assets//themes_placeholders/desert.png"></button>
                     </div>
                     <div class="themes-unlocked-row">
-                        <button><img src="./assets/placeholder.png"></button>
+                        <button><img src="./assets//themes_placeholders/easter22.png"></button>
                         <button><img src="./assets/placeholder2.png"></button>
                         <button><img src="./assets/placeholder2.png"></button>
                     </div>
@@ -205,6 +203,9 @@
     <script src="./js/sceneManager.js"></script>
     <script src="./js/mainGameplay.js"></script>
     <script src="./js/themeManager.js"></script>
+    <script src="./js/stats.js"></script>
+
+    <script src="./js/shopHandler.js"></script>
 </body>
 
 </html>

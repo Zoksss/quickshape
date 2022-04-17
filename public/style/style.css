@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Joystix";
-  src: url("./assets/joystix monospace.ttf");
+  src: url("../assets/joystix monospace.ttf");
 }
 
 * {
@@ -23,7 +23,7 @@ button {
 
 body {
   height: 100vh;
-  background-image: url("./assets/plain_back.png");
+  background-image: url("../assets/themes/basic/back.png");
   background-size: 100% 100%;
   -ms-interpolation-mode: nearest-neighbor;
       image-rendering: -webkit-optimize-contrast;
@@ -47,7 +47,7 @@ body {
 }
 
 .main-menu-top-stats .nickname {
-  background-image: url("./assets/top_nav_basic_n.png");
+  background-image: url("../assets/top_nav_basic_n.png");
   width: 70%;
   height: 6vh;
   background-size: 100% 100%;
@@ -69,7 +69,7 @@ body {
 }
 
 .main-menu-top-stats .stats .coins {
-  background-image: url("./assets/top_nav_basic_n.png");
+  background-image: url("../assets/top_nav_basic_n.png");
   width: 40%;
   height: 5vh;
   background-size: 100% 100%;
@@ -91,7 +91,7 @@ body {
 }
 
 .main-menu-top-stats .stats .gems {
-  background-image: url("./assets/top_nav_basic_n.png");
+  background-image: url("../assets/top_nav_basic_n.png");
   width: 30%;
   height: 5vh;
   background-size: 100% 100%;
@@ -541,7 +541,7 @@ body .buttons .row button img {
 .end-screen .underline {
   height: 10px;
   width: 80%;
-  background: url("./assets/line_basic.png");
+  background: url("../assets/line_basic.png");
   background-size: 100% 100%;
   background-position: center;
   margin-top: 10%;
@@ -567,7 +567,7 @@ body .buttons .row button img {
   margin-top: 10%;
   width: 60%;
   height: 80%;
-  background: url("./assets/btn_basic_basic_n.png");
+  background: url("../assets/btn_basic_basic_n.png");
   background-size: 100% 100%;
   background-position: center;
   display: -webkit-box;
@@ -591,7 +591,7 @@ body .buttons .row button img {
   margin-top: 10%;
   width: 60%;
   height: 80%;
-  background: url("/public/assets/btn_basic_basic_n.png");
+  background: url("../assets/btn_basic_basic_n.png");
   background-size: 100% 100%;
   background-position: center;
   display: -webkit-box;
@@ -672,7 +672,7 @@ body .buttons .row button img {
 }
 
 .main-menu .main-menu-nav .play-page .main-menu-top-stats-right button {
-  background-image: url("./assets/btn_basic_basic_n.png");
+  background-image: url("../assets/btn_basic_basic_n.png");
   background-position: center;
   background-size: 100% 100%;
   background-repeat: none;
@@ -684,7 +684,7 @@ body .buttons .row button img {
   width: 85%;
   height: 38vh;
   margin: 10px auto;
-  background-image: url("./assets/center_field_basic_n.png");
+  background-image: url("../assets/center_field_basic_n.png");
   background-position: center;
   background-size: 100% 100%;
   background-repeat: none;
@@ -720,7 +720,7 @@ body .buttons .row button img {
   width: 50%;
   height: 8vh;
   margin: 10px auto;
-  background-image: url("./assets/btn_basic_basic_wide_n.png");
+  background-image: url("../assets/btn_basic_basic_wide_n.png");
   background-position: center;
   background-size: 100% 100%;
   background-repeat: none;
@@ -764,7 +764,7 @@ body .buttons .row button img {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  background-image: url("./assets/basic_menu_bar.png");
+  background-image: url("../assets/basic_menu_bar.png");
   background-size: 100% 100%;
   z-index: 100;
 }
@@ -827,105 +827,11 @@ body .buttons .row button img {
   font-size: 3vh;
 }
 
-.main-menu .main-menu-nav .shop-page .special-deal-container {
-  background-image: url("./assets/center_field_basic_n.png");
-  width: 100%;
-  height: 32%;
-  margin-top: 35%;
-  background-size: 100% 100%;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.main-menu .main-menu-nav .shop-page .special-deal-container .special-deal {
-  font-size: 2vh;
-  text-align: center;
-  margin-top: -10%;
-  margin-bottom: 5%;
-}
-
-.main-menu .main-menu-nav .shop-page .special-deal-container .special-deal-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.main-menu .main-menu-nav .shop-page .special-deal-container .special-deal-content img {
-  width: 17%;
-  height: 16vh;
-}
-
-.main-menu .main-menu-nav .shop-page .special-deal-container .special-deal-content .special-deal-content-side {
-  height: 10vh;
-  margin-left: 10%;
-}
-
-.main-menu .main-menu-nav .shop-page .special-deal-container .special-deal-content .special-deal-content-side div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 3%;
-  height: 50%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-}
-
-.main-menu .main-menu-nav .shop-page .special-deal-container .special-deal-content .special-deal-content-side div img {
-  height: 100%;
-  margin-right: 5%;
-  margin-left: 20%;
-}
-
-.main-menu .main-menu-nav .shop-page .special-deal-container .special-deal-content .special-deal-content-side div .coin-deal {
-  width: 100%;
-  margin-left: 5%;
-}
-
-.main-menu .main-menu-nav .shop-page .special-deal-container .special-deal-price {
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  height: 12%;
-}
-
-.main-menu .main-menu-nav .shop-page .special-deal-container .special-deal-price img {
-  height: 100%;
-}
-
 .main-menu .main-menu-nav .shop-page .theme-shop-title {
-  margin-top: 20px;
+  margin-top: 16vh;
 }
 
-.main-menu .main-menu-nav .shop-page .themes-shop {
+.main-menu .main-menu-nav .shop-page .themes-shop, .main-menu .main-menu-nav .shop-page .themes-shop2 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -940,16 +846,17 @@ body .buttons .row button img {
   margin-top: 20px;
 }
 
-.main-menu .main-menu-nav .shop-page .themes-shop button {
+.main-menu .main-menu-nav .shop-page .themes-shop button, .main-menu .main-menu-nav .shop-page .themes-shop2 button {
   width: 35%;
   margin: 20px 5px;
   height: 100%;
-  background-image: url("./assets/placeholder.png");
+  background-image: url("../assets/placeholder.png");
   background-size: 100% 100%;
+  background-color: transparent;
   position: relative;
 }
 
-.main-menu .main-menu-nav .shop-page .themes-shop button .theme-price {
+.main-menu .main-menu-nav .shop-page .themes-shop button .theme-price, .main-menu .main-menu-nav .shop-page .themes-shop2 button .theme-price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -968,14 +875,18 @@ body .buttons .row button img {
   height: 15%;
 }
 
-.main-menu .main-menu-nav .shop-page .themes-shop button .theme-price img {
+.main-menu .main-menu-nav .shop-page .themes-shop button .theme-price img, .main-menu .main-menu-nav .shop-page .themes-shop2 button .theme-price img {
   height: 100%;
 }
 
-.main-menu .main-menu-nav .shop-page .themes-shop button .theme-price p {
+.main-menu .main-menu-nav .shop-page .themes-shop button .theme-price p, .main-menu .main-menu-nav .shop-page .themes-shop2 button .theme-price p {
   font-family: "Joystix";
   color: white;
   margin-left: 5px;
+}
+
+.main-menu .main-menu-nav .shop-page .themes-shop2 {
+  margin-top: 5vh !important;
 }
 
 .main-menu .main-menu-nav .inventory-page {
@@ -1010,9 +921,7 @@ body .buttons .row button img {
   margin-top: 30%;
   width: 90%;
   height: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1020,7 +929,7 @@ body .buttons .row button img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url("./assets/center_field_basic_n.png");
+  background: url("../assets/center_field_basic_n.png");
   background-size: 100% 100%;
 }
 
@@ -1029,12 +938,10 @@ body .buttons .row button img {
 }
 
 .main-menu .main-menu-nav .inventory-page .badge-section .badges {
+  display: none;
   margin-top: 5%;
   width: 80%;
   height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1060,7 +967,7 @@ body .buttons .row button img {
 }
 
 .main-menu .main-menu-nav .inventory-page .themes-unlocked-value {
-  margin: 8% 0 5% 0;
+  margin: 30% 0 5% 0;
 }
 
 .main-menu .main-menu-nav .inventory-page .inventory-themes-section {

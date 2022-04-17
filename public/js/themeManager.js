@@ -75,7 +75,6 @@ let backDOMArray = [ // css back
 let centerDOMArray = [ // css back
     document.querySelector("#currShapeWindow"),
     document.querySelector("#badgeSection"),
-    document.querySelector("#specialDealContainer"),
     document.querySelector("#startSingleplayerBtn"),
 ]
 let btnDOMArray = [ // css back
@@ -106,4 +105,5 @@ let navDOMArray = [ // css back
 
 
 
+//console.table(centerDOMArray);
 themes.science.setTheme();

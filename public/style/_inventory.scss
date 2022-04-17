@@ -23,20 +23,20 @@
                 margin-top: 30%;
                 width: 90%;
                 height: 30%;
-                display: flex;
+                display: none;
                 //justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                background: url("./assets/center_field_basic_n.png");
+                background: url("../assets/center_field_basic_n.png");
                 background-size: 100% 100%;
                 .badge-section-title {
                     margin-top: 5%;
                 }
                 .badges {
+                    display: none;
                     margin-top: 5%;
                     width: 80%;
                     height: 10vh;
-                    display: flex;
                     flex-direction: column;
                     .row {
                         display: flex;
@@ -55,7 +55,7 @@
                 }
             }
             .themes-unlocked-value{
-                margin: 8% 0 5% 0;
+                margin: 30% 0 5% 0;
             }
             .inventory-themes-section{
                 overflow-y: scroll !important;

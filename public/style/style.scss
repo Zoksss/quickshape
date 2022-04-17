@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Joystix";
-    src: url("./assets/joystix\ monospace.ttf");
+    src: url("../assets/joystix\ monospace.ttf");
 }
 
 * {
@@ -20,7 +20,7 @@ button{
 }
 body {
     height: 100vh;
-    background-image: url("./assets/plain_back.png");
+    background-image: url("../assets/themes/basic/back.png");
     background-size: 100% 100%;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
@@ -39,7 +39,7 @@ body {
     top: 20px;
     left: 20px;
     .nickname {
-        background-image: url("./assets/top_nav_basic_n.png");
+        background-image: url("../assets/top_nav_basic_n.png");
         width: 70%;
         height: 6vh;
         background-size: 100% 100%;
@@ -53,7 +53,7 @@ body {
         display: flex;
         margin-top: 10px;
         .coins {
-            background-image: url("./assets/top_nav_basic_n.png");
+            background-image: url("../assets/top_nav_basic_n.png");
             width: 40%;
             height: 5vh;
             background-size: 100% 100%;
@@ -68,7 +68,7 @@ body {
             }
         }
         .gems {
-            background-image: url("./assets/top_nav_basic_n.png");
+            background-image: url("../assets/top_nav_basic_n.png");
             width: 30%;
             height: 5vh;
             background-size: 100% 100%;
@@ -114,7 +114,6 @@ body {
 
 @import "_gameplay";
 @import "_endscreen";
-@import "_menu";
 @import "_navigation";
 @import "_shop";
 @import "_inventory";
