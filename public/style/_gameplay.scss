@@ -1,19 +1,6 @@
-@font-face {
-    font-family: "Joystix";
-    src: url("./assets/joystix\ monospace.ttf");
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-}
-
 body{
     height: 100vh;
-    background-image: url("./assets/plain_back.png");
+    //background-image: url("./assets/plain_back.png");
     background-size: 100% 100%;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;

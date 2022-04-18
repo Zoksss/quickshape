@@ -55,7 +55,7 @@ let themes = {
         "./assets/themes/desert/top.png",
         "./assets/themes/desert/line.png",
     ),
-    easter: new Theme("Easter 22",
+    easter22: new Theme("Easter 22",
         "./assets/themes/easter22/back.png",
         "./assets/themes/easter22/center.png",
         "./assets/themes/easter22/btn.png",
@@ -106,4 +106,4 @@ let navDOMArray = [ // css back
 
 
 //console.table(centerDOMArray);
-themes.science.setTheme();
+themes.basic.setTheme();

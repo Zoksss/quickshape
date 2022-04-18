@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Joystix";
-  src: url("../assets/joystix monospace.ttf");
+  src: url("../assets/joystix.ttf");
 }
 
 * {
@@ -158,23 +158,8 @@ body {
   }
 }
 
-@font-face {
-  font-family: "Joystix";
-  src: url("./assets/joystix monospace.ttf");
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  outline: none;
-  border: none;
-}
-
 body {
   height: 100vh;
-  background-image: url("./assets/plain_back.png");
   background-size: 100% 100%;
   -ms-interpolation-mode: nearest-neighbor;
       image-rendering: -webkit-optimize-contrast;
@@ -854,6 +839,22 @@ body .buttons .row button img {
   background-size: 100% 100%;
   background-color: transparent;
   position: relative;
+  -webkit-transition: 200ms all ease;
+  transition: 200ms all ease;
+}
+
+.main-menu .main-menu-nav .shop-page .themes-shop button .checkmark, .main-menu .main-menu-nav .shop-page .themes-shop2 button .checkmark {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 30px;
+  width: 30px;
+  z-index: 1000;
+}
+
+.main-menu .main-menu-nav .shop-page .themes-shop button:hover, .main-menu .main-menu-nav .shop-page .themes-shop2 button:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 .main-menu .main-menu-nav .shop-page .themes-shop button .theme-price, .main-menu .main-menu-nav .shop-page .themes-shop2 button .theme-price {

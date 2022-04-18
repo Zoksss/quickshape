@@ -1,5 +1,5 @@
-let coins = 0;
-let gems = 0;
+let userCoins = 0;
+let userGems = 1000;
 
 let themesUnlocked = [
     {
@@ -18,7 +18,7 @@ let themesUnlocked = [
         object: themes.desert,
         unlocked: false,
         price: 150,
-        gems: false,
+        gems: true,
         highValue: false,
         disabled: false
     },
@@ -26,7 +26,7 @@ let themesUnlocked = [
         name: "Science",
         placeholder: "./assets/themes_placeholders/science.png",
         object: themes.science,
-        unlocked: false,
+        unlocked: true,
         price: 300,
         gems: false,
         highValue: false,
@@ -38,7 +38,7 @@ let themesUnlocked = [
         object: themes.easter22,
         unlocked: false,
         price: 300,
-        gems: false,
+        gems: true,
         highValue: false,
         disabled: true
     }
