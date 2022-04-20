@@ -11,6 +11,9 @@ const roundplustime = document.querySelector("#plustime");
 const startCounter = document.querySelector("#startCounter");
 const currRoundAverage = document.querySelector("#currRoundAverage");
 
+const topCoins = document.querySelector("#topCoins");
+const topGems = document.querySelector("#topGems");
+
 let currRound = 0;
 let prevShape = null;
 let currShape = null;
@@ -89,6 +92,10 @@ const generateRandomShape = () => {
     }
 }
 
+
+const endScreenCoins = document.querySelector("#endScreenCoins");
+const endScreenGems = document.querySelector("#endScreenGems");
+
 const checkIsCorrect = (shape) => {
     if (shape === currShape) add = false;
     else {
@@ -100,7 +107,66 @@ const checkIsCorrect = (shape) => {
     timerReset();
     if (currRound >= 10) {
         timerReset();
+        //
         currRoundAverage.innerHTML = calculateAverage();
+        console.log(currRoundAverage.innerHTML);
+        let avg = parseFloat(currRoundAverage.innerHTML);
+        if (!isNaN(avg)) {
+            if (avg >= 0 && avg <= 0.030) {
+                userCoins += 83;
+                userGems += 6;
+                endScreenCoins.innerHTML = "+83";
+                endScreenGems.innerHTML = "+6";
+            }
+            else if (avg > 0.030 && avg <= 0.050) {
+                userCoins += 61;
+                userGems += 3;
+                endScreenCoins.innerHTML = "+61";
+                endScreenGems.innerHTML = "+3";
+            }
+            else if (avg > 0.050 && avg <= 0.080) {
+                userCoins += 33;
+                userGems += 1;
+                endScreenCoins.innerHTML = "+33";
+                endScreenGems.innerHTML = "+1";
+            }
+            else if (avg > 0.080 && avg <= 0.11) {
+                userCoins += 21;
+                userGems += 1;
+                endScreenCoins.innerHTML = "+21";
+                endScreenGems.innerHTML = "+1";
+            }
+            else if (avg > 0.11 && avg <= 0.13) {
+                userCoins += 17;
+                userGems += 1;
+                endScreenCoins.innerHTML = "+17";
+                endScreenGems.innerHTML = "+1";
+            }
+            else if (avg > 0.13 && avg <= 0.16) {
+                userCoins += 11;
+                userGems += 0;
+                endScreenCoins.innerHTML = "+11";
+                endScreenGems.innerHTML = "+0";
+            }
+            else if (avg > 0.16 && avg <= 0.22) {
+                userCoins += 8;
+                userGems += 0;
+                endScreenCoins.innerHTML = "+8";
+                endScreenGems.innerHTML = "+0";
+            }
+            else if (avg > 0.22 && avg <= 0.3) {
+                userCoins += 4;
+                userGems += 0;
+                endScreenCoins.innerHTML = "+4";
+                endScreenGems.innerHTML = "+0";
+            }
+            else {
+                endScreenCoins.innerHTML = "+0";
+                endScreenGems.innerHTML = "+0";
+            }
+            topCoins.children[1].innerHTML = userCoins;
+            topGems.children[1].innerHTML = userGems;
+        }
         endScreen.style.display = "flex";
         gameplaySection.style.display = "none";
         // calculate times and coins

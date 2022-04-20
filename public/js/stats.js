@@ -1,5 +1,7 @@
-let userCoins = 0;
-let userGems = 1000;
+let userCoins = 75;
+let userGems = 10;
+topCoins.children[1].innerHTML = userCoins;
+topGems.children[1].innerHTML = userGems;
 
 let themesUnlocked = [
     {

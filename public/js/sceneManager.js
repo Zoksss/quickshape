@@ -110,6 +110,7 @@ navShopBtn.addEventListener("click", () => {
 });
 
 navInventorypBtn.addEventListener("click", () => {
+    refreshInventory();
     playPage.style.display = "none";
     shopPage.style.display = "none";
     inventoryPage.style.display = "flex";

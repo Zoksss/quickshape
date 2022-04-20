@@ -7,11 +7,15 @@ function getRandomInt(max) {
 }
 
 const generateShop = () => {
+    let usedNumbers = [];
     themesShop1.innerHTML = "";
-
+    let randomNum;
     for (let i = 0; i < 3; i++) {
-        let randomNum = getRandomInt(4);
-        //if(themesUnlocked[randomNum].unlocked) return;
+        while (true) {
+            randomNum = getRandomInt(4);
+            if (!usedNumbers.includes(randomNum)) break;
+        }
+        usedNumbers.push(randomNum);
         if (!themesUnlocked[randomNum].unlocked) {
             themesShop1.innerHTML += `
             <button class="theme1" onclick='buyTheme(this, "${themesUnlocked[randomNum].name}")' style="background-image: url('${themesUnlocked[randomNum].placeholder}');">
@@ -34,19 +38,30 @@ const generateShop = () => {
     }
 }
 
-
 generateShop();
-
 
 const buyTheme = (btn, name) => {
     let themeObj = themesUnlocked.find(o => o.name === name);
-    console.log(themeObj)
     if (themeObj) {
         if (themeObj.unlocked) themeObj.object.setTheme();
         else {
             // buy theme logic
-            if(themeObj.gems){
-                if(userGems >= themeObj.price){
+            if (themeObj.gems) {
+                if (userGems >= themeObj.price) {
+                    userGems -= themeObj.price;
+                    topGems.children[1].innerHTML = userGems;
+                    themeObj.unlocked = true;
+                    btn.innerHTML = `
+                        <div class="theme-price">
+                            <p id="shopThemePrice">Owned</p>
+                        </div>
+                        <img class="checkmark" src="./assets/checkmark.png">
+                    `;
+                }
+            }else{
+                if (userCoins >= themeObj.price) {
+                    userCoins -= themeObj.price;
+                    topCoins.children[1].innerHTML = topCoins;
                     themeObj.unlocked = true;
                     btn.innerHTML = `
                         <div class="theme-price">
@@ -60,6 +75,3 @@ const buyTheme = (btn, name) => {
     }
 }
 
-const filterIt = (arr, searchKey) => {
-    return arr.filter(obj => Object.keys(obj).some(key => obj[key].includes(searchKey)));
-}

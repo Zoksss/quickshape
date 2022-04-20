@@ -108,24 +108,11 @@
                     </div>
 
                 </div>
-                <p class="themes-unlocked-value">Your themes (5/84)</p>
-                <div class="inventory-themes-section">
+                <p class="themes-unlocked-value" id="themesUnlocedCounter">Your themes (0/0)</p>
+                <div class="inventory-themes-section" id="inventorySection">
                     <div class="themes-unlocked-row">
-                        <button><img src="./assets/themes_placeholders/basic.png"></button>
-                        <button><img src="./assets/themes_placeholders/science.png"></button>
-                        <button><img src="./assets//themes_placeholders/desert.png"></button>
                     </div>
-                    <div class="themes-unlocked-row">
-                        <button><img src="./assets//themes_placeholders/easter22.png"></button>
-                        <button><img src="./assets/placeholder2.png"></button>
-                        <button><img src="./assets/placeholder2.png"></button>
-                    </div>
-                    <div class="themes-unlocked-row">
-                        <button><img src="./assets/placeholder.png"></button>
-                        <button><img src="./assets/placeholder2.png"></button>
-                        <button><img src="./assets/placeholder2.png"></button>
-                    </div>
-                    <div class="scroll-helper"></div>
+                    <div class="scroll-helper" id=""></div>
                 </div>
             </div>
 
@@ -183,11 +170,11 @@
         <div class="underline"></div>
         <div class="coins">
             <img class="coin-icon" src="./assets/coin_icon.png">
-            <p class="coin-value">+10</p>
+            <p class="coin-value" id="endScreenCoins">+10</p>
         </div>
         <div class="gems">
             <img class="gems-icon" src="./assets/gem.png">
-            <p class="gem-value">+1</p>
+            <p class="gem-value" id="endScreenGems">+1</p>
         </div>
         <div class="underline"></div>
         <div class="end-screen-buttons">
@@ -204,8 +191,8 @@
     <script src="./js/mainGameplay.js"></script>
     <script src="./js/themeManager.js"></script>
     <script src="./js/stats.js"></script>
-
     <script src="./js/shopHandler.js"></script>
+    <script src="./js/inventory.js"></script>
 </body>
 
 </html>
