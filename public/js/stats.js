@@ -19,7 +19,7 @@ let themesUnlocked = [
         placeholder: "./assets/themes_placeholders/desert.png",
         object: themes.desert,
         unlocked: false,
-        price: 150,
+        price: 10,
         gems: true,
         highValue: false,
         disabled: false
@@ -28,8 +28,8 @@ let themesUnlocked = [
         name: "Science",
         placeholder: "./assets/themes_placeholders/science.png",
         object: themes.science,
-        unlocked: true,
-        price: 300,
+        unlocked: false,
+        price: 10,
         gems: false,
         highValue: false,
         disabled: false
@@ -39,9 +39,29 @@ let themesUnlocked = [
         placeholder: "./assets/themes_placeholders/easter22.png",
         object: themes.easter22,
         unlocked: false,
-        price: 300,
+        price: 10,
         gems: true,
         highValue: false,
-        disabled: true
+        disabled: false
+    },
+    {
+        name: "Mountain",
+        placeholder: "./assets/themes_placeholders/mountain.png",
+        object: themes.mountain,
+        unlocked: false,
+        price: 10,
+        gems: false,
+        highValue: false,
+        disabled: false
+    },
+    {
+        name: "Dark",
+        placeholder: "./assets/themes_placeholders/dark.png",
+        object: themes.dark,
+        unlocked: false,
+        price: 10,
+        gems: false,
+        highValue: false,
+        disabled: false
     }
 ];

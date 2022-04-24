@@ -1,0 +1,23 @@
+{
+  "name": "qs",
+  "version": "1.0.0",
+  "description": "��",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zoksss/quickshape.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zoksss/quickshape/issues"
+  },
+  "homepage": "https://github.com/Zoksss/quickshape#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "socket.io": "^1.7.4"
+  }
+}

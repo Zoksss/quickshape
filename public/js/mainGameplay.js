@@ -112,43 +112,43 @@ const checkIsCorrect = (shape) => {
         console.log(currRoundAverage.innerHTML);
         let avg = parseFloat(currRoundAverage.innerHTML);
         if (!isNaN(avg)) {
-            if (avg >= 0 && avg <= 0.030) {
+            if (avg >= 0 && avg <= 0.040) {
                 userCoins += 83;
                 userGems += 6;
                 endScreenCoins.innerHTML = "+83";
                 endScreenGems.innerHTML = "+6";
             }
-            else if (avg > 0.030 && avg <= 0.050) {
+            else if (avg > 0.040 && avg <= 0.070) {
                 userCoins += 61;
                 userGems += 3;
                 endScreenCoins.innerHTML = "+61";
                 endScreenGems.innerHTML = "+3";
             }
-            else if (avg > 0.050 && avg <= 0.080) {
+            else if (avg > 0.070 && avg <= 0.01) {
                 userCoins += 33;
                 userGems += 1;
                 endScreenCoins.innerHTML = "+33";
                 endScreenGems.innerHTML = "+1";
             }
-            else if (avg > 0.080 && avg <= 0.11) {
+            else if (avg > 0.01 && avg <= 0.14) {
                 userCoins += 21;
                 userGems += 1;
                 endScreenCoins.innerHTML = "+21";
                 endScreenGems.innerHTML = "+1";
             }
-            else if (avg > 0.11 && avg <= 0.13) {
+            else if (avg > 0.14 && avg <= 0.19) {
                 userCoins += 17;
                 userGems += 1;
                 endScreenCoins.innerHTML = "+17";
                 endScreenGems.innerHTML = "+1";
             }
-            else if (avg > 0.13 && avg <= 0.16) {
+            else if (avg > 0.19 && avg <= 0.25) {
                 userCoins += 11;
                 userGems += 0;
                 endScreenCoins.innerHTML = "+11";
                 endScreenGems.innerHTML = "+0";
             }
-            else if (avg > 0.16 && avg <= 0.22) {
+            else if (avg > 0.25 && avg <= 0.45) {
                 userCoins += 8;
                 userGems += 0;
                 endScreenCoins.innerHTML = "+8";
