@@ -10,6 +10,17 @@
 </head>
 
 <body>
+    <section class="multiplayer">
+        <div class="multiplayer-searching">
+            <p>Searching for player...</p>
+            <button class="multiplayer-cancel-btn">Cancel</button>
+        </div>
+        <div class="multiplayer-match-found">
+            <p class="multiplayer-match-found-you">Zoks (you)</p>
+            <p class="multiplayer-match-found-vs">VS</p>
+            <p class="multiplayer-match-found-opponet">Guest3904</p>
+        </div>
+    </section>
     <section class="main-menu" id="mainMenuSection">
         <div class="main-menu-top-stats">
             <div class="nickname" id="topNickname">
@@ -145,6 +156,28 @@
             </button>
             <button class="replay" id="playAgainBtn"><img class="play-again" src="./assets/play_again.png"></button>
 
+        </div>
+    </section>
+    <section class="multiplayer-end-screen" id="endScreen">
+        <p class="winner">Guest3904 won!</p>
+        <p class="end-screen-average-round-time-title">YOUR AVERAGE</p>
+        <p class="end-screen-average-round-time" id="currRoundAverage">0.00</p>
+        <p class="end-screen-opponet-average-title">Guest3904 AVG.</p>
+        <p class="end-screen-opponet-average-time">0.00</p>
+        <div class="underline"></div>
+        <div class="coins">
+            <img class="coin-icon" src="./assets/coin_icon.png">
+            <p class="coin-value" id="endScreenCoins">+10</p>
+        </div>
+        <div class="gems">
+            <img class="gems-icon" src="./assets/gem.png">
+            <p class="gem-value" id="endScreenGems">+1</p>
+        </div>
+        <div class="underline"></div>
+        <div class="end-screen-buttons">
+            <button id="goToMenuBtn" class="go-back">
+                <p>MENU</p>
+            </button>
         </div>
     </section>
     <span id="transitionHolder"></span>
