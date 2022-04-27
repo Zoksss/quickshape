@@ -11,11 +11,11 @@
 
 <body>
     <section class="multiplayer">
-        <div class="multiplayer-searching">
+        <div class="multiplayer-searching" id="multiplayerSearching">
             <p>Searching for player...</p>
-            <button class="multiplayer-cancel-btn">Cancel</button>
+            <button class="multiplayer-cancel-btn" id="multiplayerCancelSearch">Cancel</button>
         </div>
-        <div class="multiplayer-match-found">
+        <div class="multiplayer-match-found" id="multiplayerMatchFound">
             <p class="multiplayer-match-found-you">Zoks (you)</p>
             <p class="multiplayer-match-found-vs">VS</p>
             <p class="multiplayer-match-found-opponet">Guest3904</p>
@@ -158,29 +158,37 @@
 
         </div>
     </section>
-    <section class="multiplayer-end-screen" id="endScreen">
+    <section class="multiplayer-end-screen" id="multiplayerEndScreen">
         <p class="winner">Guest3904 won!</p>
         <p class="end-screen-average-round-time-title">YOUR AVERAGE</p>
-        <p class="end-screen-average-round-time" id="currRoundAverage">0.00</p>
-        <p class="end-screen-opponet-average-title">Guest3904 AVG.</p>
-        <p class="end-screen-opponet-average-time">0.00</p>
+        <p class="end-screen-average-round-time" id="mulCurrRoundAverage">0.00</p>
+        <p class="end-screen-opponet-average-title" id="opponetAverageTitle">Guest3904 AVG.</p>
+        <p class="end-screen-opponet-average-time" id="opponetAverage">Waiting...</p>
         <div class="underline"></div>
         <div class="coins">
             <img class="coin-icon" src="./assets/coin_icon.png">
-            <p class="coin-value" id="endScreenCoins">+10</p>
+            <p class="coin-value" id="mulEndScreenCoins">+10</p>
         </div>
         <div class="gems">
             <img class="gems-icon" src="./assets/gem.png">
-            <p class="gem-value" id="endScreenGems">+1</p>
+            <p class="gem-value" id="mulEndScreenGems">+1</p>
         </div>
         <div class="underline"></div>
         <div class="end-screen-buttons">
-            <button id="goToMenuBtn" class="go-back">
+            <button id="mulGoToMenuBtn" class="go-back">
                 <p>MENU</p>
             </button>
         </div>
     </section>
     <span id="transitionHolder"></span>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        let socket = io();
+        socket.on("connect", () => {
+            console.log("Connected to the server");
+        });
+    </script>
     <script src="./js/functions.js"></script>
     <script src="./js/sceneManager.js"></script>
     <script src="./js/mainGameplay.js"></script>

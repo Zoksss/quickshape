@@ -11,8 +11,18 @@ const roundplustime = document.querySelector("#plustime");
 const startCounter = document.querySelector("#startCounter");
 const currRoundAverage = document.querySelector("#currRoundAverage");
 
+const mulCurrRoundAverage = document.querySelector("#mulCurrRoundAverage");
+const opponetAverageTitle = document.querySelector("#opponetAverageTitle");
+const opponetAverage = document.querySelector("#opponetAverage");
+const mulEndScreenCoins = document.querySelector("#mulEndScreenCoins");
+const mulEndScreenGems = document.querySelector("#mulEndScreenGems");
+
+
 const topCoins = document.querySelector("#topCoins");
 const topGems = document.querySelector("#topGems");
+
+
+const multiplayerEndScreen = document.querySelector("#multiplayerEndScreen");
 
 let currRound = 0;
 let prevShape = null;
@@ -96,6 +106,8 @@ const generateRandomShape = () => {
 const endScreenCoins = document.querySelector("#endScreenCoins");
 const endScreenGems = document.querySelector("#endScreenGems");
 
+let isMultiplayerG = false;
+
 const checkIsCorrect = (shape) => {
     if (shape === currShape) add = false;
     else {
@@ -109,7 +121,8 @@ const checkIsCorrect = (shape) => {
         timerReset();
         //
         currRoundAverage.innerHTML = calculateAverage();
-        console.log(currRoundAverage.innerHTML);
+        mulCurrRoundAverage.innerHTML = currRoundAverage.innerHTML;
+        socket.emit("averageSend", currRoundAverage.innerHTML);
         let avg = parseFloat(currRoundAverage.innerHTML);
         if (!isNaN(avg)) {
             if (avg >= 0 && avg <= 0.040) {
@@ -117,59 +130,77 @@ const checkIsCorrect = (shape) => {
                 userGems += 6;
                 endScreenCoins.innerHTML = "+83";
                 endScreenGems.innerHTML = "+6";
+                mulEndScreenCoins.innerHTML = "+83";
+                mulEndScreenGems.innerHTML = "+6";
             }
             else if (avg > 0.040 && avg <= 0.070) {
                 userCoins += 61;
                 userGems += 3;
                 endScreenCoins.innerHTML = "+61";
                 endScreenGems.innerHTML = "+3";
+                mulEndScreenCoins.innerHTML = "+61";
+                mulEndScreenGems.innerHTML = "+3";
             }
             else if (avg > 0.070 && avg <= 0.01) {
                 userCoins += 33;
                 userGems += 1;
                 endScreenCoins.innerHTML = "+33";
                 endScreenGems.innerHTML = "+1";
+                mulEndScreenCoins.innerHTML = "+33";
+                mulEndScreenGems.innerHTML = "+1";
             }
             else if (avg > 0.01 && avg <= 0.14) {
                 userCoins += 21;
                 userGems += 1;
                 endScreenCoins.innerHTML = "+21";
                 endScreenGems.innerHTML = "+1";
+                mulEndScreenCoins.innerHTML = "+21";
+                mulEndScreenGems.innerHTML = "+1";
             }
             else if (avg > 0.14 && avg <= 0.19) {
                 userCoins += 17;
                 userGems += 1;
                 endScreenCoins.innerHTML = "+17";
                 endScreenGems.innerHTML = "+1";
+                mulEndScreenCoins.innerHTML = "+17";
+                mulEndScreenGems.innerHTML = "+1";
             }
             else if (avg > 0.19 && avg <= 0.25) {
                 userCoins += 11;
-                userGems += 0;
                 endScreenCoins.innerHTML = "+11";
                 endScreenGems.innerHTML = "+0";
+                mulEndScreenCoins.innerHTML = "+11";
+                mulEndScreenGems.innerHTML = "+0";
             }
             else if (avg > 0.25 && avg <= 0.45) {
                 userCoins += 8;
-                userGems += 0;
                 endScreenCoins.innerHTML = "+8";
                 endScreenGems.innerHTML = "+0";
+                mulEndScreenCoins.innerHTML = "+8";
+                mulEndScreenGems.innerHTML = "+0";
             }
             else if (avg > 0.22 && avg <= 0.3) {
                 userCoins += 4;
-                userGems += 0;
                 endScreenCoins.innerHTML = "+4";
                 endScreenGems.innerHTML = "+0";
+                mulEndScreenCoins.innerHTML = "+4";
+                mulEndScreenGems.innerHTML = "+0";
             }
             else {
                 endScreenCoins.innerHTML = "+0";
                 endScreenGems.innerHTML = "+0";
+                mulEndScreenCoins.innerHTML = "+0";
+                mulEndScreenGems.innerHTML = "+0";
             }
             topCoins.children[1].innerHTML = userCoins;
             topGems.children[1].innerHTML = userGems;
         }
-        endScreen.style.display = "flex";
         gameplaySection.style.display = "none";
         // calculate times and coins
+        if(!isMultiplayerG) endScreen.style.display = "flex";
+        else{
+            multiplayerEndScreen.style.display = "flex";
+        }
     } else {
         generateRandomShape();
         timerStart();
@@ -179,7 +210,8 @@ const checkIsCorrect = (shape) => {
 
 
 var test = null;
-const startGame = () => {
+const startGame = (isMultiplayer) => {
+    isMultiplayerG = isMultiplayer;
     let step = 3;
     resetGameplayParamters();
     startCounter.parentElement.classList.remove("slide");
@@ -194,7 +226,6 @@ const startGame = () => {
         startCounter.classList.add("shake");
         startCounter.addEventListener('animationend', () => { startCounter.classList.remove("shake"); });
         if (step == 0) {
-            console.log("test")
             clearInterval(test);
             startCounter.parentElement.classList.add("slide");
             setTimeout(() => {

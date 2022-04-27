@@ -1046,7 +1046,7 @@ body .buttons .row button img {
 }
 
 .multiplayer .multiplayer-searching .multiplayer-cancel-btn {
-  background-image: url("/public/assets/btn_basic_basic_wide_n.png");
+  background-image: url("../assets/themes/basic/btn_wide.png");
   width: 55%;
   margin: 10px 5px;
   height: 10%;
@@ -1094,10 +1094,6 @@ body .buttons .row button img {
   font-size: 3vh;
 }
 
-.main-menu {
-  display: none !important;
-}
-
 .multiplayer-end-screen {
   height: 100%;
   display: -webkit-box;
@@ -1112,7 +1108,7 @@ body .buttons .row button img {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 10% 5%;
-  display: flex;
+  display: none;
 }
 
 .multiplayer-end-screen .winner {

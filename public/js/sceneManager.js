@@ -17,6 +17,7 @@ const transitionHolder = document.querySelector("#transitionHolder");
 
 const startSingleplayerBtn = document.querySelector("#startSingleplayerBtn");
 const goToMenuBtn = document.querySelector("#goToMenuBtn");
+const mulGoToMenuBtn = document.querySelector("#mulGoToMenuBtn");
 
 const mainMenuSection = document.querySelector("#mainMenuSection");
 /*
@@ -77,7 +78,7 @@ playAgainBtn.addEventListener("click", () => {
     })
     transitionHolder.addEventListener('animationend', () => { transitionHolder.classList.remove("transition"); });
 
-    startGame();
+    startGame(fall);
 });
 
 */
@@ -86,7 +87,7 @@ playAgainBtn.addEventListener("click", () => {
 startSingleplayerBtn.addEventListener("click", () => {
     mainMenuSection.style.display = "none";
     gameplaySection.style.display = "block";
-    startGame();
+    startGame(false);
 
 });
 
@@ -126,7 +127,7 @@ playAgainBtn.addEventListener("click", () => {
     gameplaySection.style.display = "block";
     startCounter.parentElement.style.display = "flex";
 
-    startGame();
+    startGame(false);
 });
 goToMenuBtn.addEventListener("click", () => {
     mainMenuSection.style.display = "flex";
@@ -134,3 +135,4 @@ goToMenuBtn.addEventListener("click", () => {
     gameplaySection.style.display = "none";
     startCounter.parentElement.style.display = "flex";
 });
+
