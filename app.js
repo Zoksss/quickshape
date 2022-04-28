@@ -15,6 +15,7 @@ const io = socketio(server);
 class Room {
     constructor(leader) {
         this.leader = leader;
+        this.player = "";
         this.isPlaying = false;
     }
 }
@@ -23,13 +24,15 @@ let rooms = {};
 
 io.on("connection", (socket) => {
     console.log("Made socket connection with id: " + socket.id);
-    socket.on("startJoining", () => {
+    socket.on("startJoining", (nickname) => {
+        socket.nickname = nickname;
         let room = searchForEmptyRoom();
         console.log(room);
         if (room) {
             // join socket
             socket.join(room.leader);
             rooms[room.leader].isPlaying = true;
+            rooms[room.leader].player = socket.id;
             console.log("joined");
             io.in(room.leader).emit("startGame");
         } else {
@@ -46,10 +49,11 @@ io.on("connection", (socket) => {
 
     });
     socket.on("averageSend", time => {
-        var room = io.sockets.adapter.sids[socket.id];
-        
         //io.to(rooms[0]).emit("averageShare", time);
-        console.log(room);
+        let room = searchForRoomWhereUser(socket.id);
+        if(room){
+           socket.to(room.leader).emit("averageShare", time);
+        }
     });
 });
 
@@ -57,6 +61,17 @@ const searchForEmptyRoom = () => {
     let isFound = null;
     for (const key in rooms) {
         if (rooms[key].isPlaying === false) {
+            isFound = rooms[key];
+            break;
+        }
+    }
+    return isFound;
+}
+
+const searchForRoomWhereUser = (sockeid) => {
+    let isFound = null;
+    for (const key in rooms) {
+        if (rooms[key].player == sockeid || rooms[key].leader == sockeid) {
             isFound = rooms[key];
             break;
         }

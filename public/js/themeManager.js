@@ -107,6 +107,7 @@ let btnDOMArray = [ // css back
 
 let btnWideDOMArray = [ // css back
     document.querySelector("#vsButton"),
+    document.querySelector("#mulGoToMenuBtn"),
 ]
 
 let topDOMArray = [ // css back

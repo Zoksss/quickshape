@@ -10,6 +10,11 @@
 </head>
 
 <body>
+    <section class="nickname-selector">
+        <p>Input your nickname:</p>
+        <input type="text" class="nickname-input" placeholder="Player" id="nicknameInput">
+        <button id="nicknameSubmit">Submit</button>
+    </section>
     <section class="multiplayer">
         <div class="multiplayer-searching" id="multiplayerSearching">
             <p>Searching for player...</p>
@@ -24,7 +29,7 @@
     <section class="main-menu" id="mainMenuSection">
         <div class="main-menu-top-stats">
             <div class="nickname" id="topNickname">
-                <p>Zoksss</p>
+                <p id="yourNickname">Zoksss</p>
             </div>
             <div class="stats">
                 <div class="coins" id="topCoins"><img src="./assets/coin_icon.png" alt="">
@@ -159,7 +164,7 @@
         </div>
     </section>
     <section class="multiplayer-end-screen" id="multiplayerEndScreen">
-        <p class="winner">Guest3904 won!</p>
+        <p class="winner" id="winnerText">Guest3904 won!</p>
         <p class="end-screen-average-round-time-title">YOUR AVERAGE</p>
         <p class="end-screen-average-round-time" id="mulCurrRoundAverage">0.00</p>
         <p class="end-screen-opponet-average-title" id="opponetAverageTitle">Guest3904 AVG.</p>
@@ -188,6 +193,8 @@
         socket.on("connect", () => {
             console.log("Connected to the server");
         });
+        let opponetSent = false;
+        let yourReady = false;
     </script>
     <script src="./js/functions.js"></script>
     <script src="./js/sceneManager.js"></script>

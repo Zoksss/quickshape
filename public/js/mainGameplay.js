@@ -17,9 +17,13 @@ const opponetAverage = document.querySelector("#opponetAverage");
 const mulEndScreenCoins = document.querySelector("#mulEndScreenCoins");
 const mulEndScreenGems = document.querySelector("#mulEndScreenGems");
 
+const winnerText = document.querySelector("#winnerText");
+
+
 
 const topCoins = document.querySelector("#topCoins");
 const topGems = document.querySelector("#topGems");
+const yourNickname = document.querySelector("#yourNickname");
 
 
 const multiplayerEndScreen = document.querySelector("#multiplayerEndScreen");
@@ -122,6 +126,16 @@ const checkIsCorrect = (shape) => {
         //
         currRoundAverage.innerHTML = calculateAverage();
         mulCurrRoundAverage.innerHTML = currRoundAverage.innerHTML;
+        yourReady = true;
+        if (opponetSent && yourReady) {
+            // cal winner
+            let yourTimeNum = parseFloat(currRoundAverage.innerHTML);
+            let opponetTimeNum = parseFloat(opponetAverage.innerHTML);
+            if (yourTimeNum < opponetTimeNum) winnerText.innerHTML = "You won!";
+            else if (yourTimeNum > opponetTimeNum) winnerText.innerHTML = "Guest3904 won!";
+            else winnerText.innerHTML = "Tie!";
+        }
+
         socket.emit("averageSend", currRoundAverage.innerHTML);
         let avg = parseFloat(currRoundAverage.innerHTML);
         if (!isNaN(avg)) {
@@ -197,8 +211,8 @@ const checkIsCorrect = (shape) => {
         }
         gameplaySection.style.display = "none";
         // calculate times and coins
-        if(!isMultiplayerG) endScreen.style.display = "flex";
-        else{
+        if (!isMultiplayerG) endScreen.style.display = "flex";
+        else {
             multiplayerEndScreen.style.display = "flex";
         }
     } else {
@@ -248,6 +262,7 @@ const resetGameplayParamters = () => {
     prevShape = currShape = null;
     round.innerHTML = currRound + "/" + "10";
     time.innerHTML = "0.00";
+    winnerText.innerHTML = "Waiting..."
 }
 
 

@@ -1,7 +1,20 @@
 let userCoins = 75;
 let userGems = 10;
+let nickname = "Player";
 topCoins.children[1].innerHTML = userCoins;
 topGems.children[1].innerHTML = userGems;
+yourNickname.innerHTML = nickname;
+
+const nicknameInput = document.querySelector("#nicknameInput");
+const nicknameSubmit = document.querySelector("#nicknameSubmit");
+
+nicknameSubmit.addEventListener("click", () => {
+    nickname = nicknameInput.value;
+    yourNickname.innerHTML = nickname;
+    nicknameInput.parentElement.style.display = "none";
+})
+
+
 
 let themesUnlocked = [
     {

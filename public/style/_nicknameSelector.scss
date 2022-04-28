@@ -1,0 +1,52 @@
+.nickname-selector{
+    background-image: url("../assets/themes/basic/back.png");
+    height: 100vh;
+    background-size: 100% 100%;
+    width: 100%;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    padding: 20px 10px;
+    max-width: 400px;
+    margin: auto;
+    font-family: "Joystix";
+    color: white;
+    position: relative;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p{
+        margin-bottom: 40%;
+        position: absolute;
+    }
+    .nickname-input{
+        outline: none;
+        border: none;
+        background-image: url("../assets/themes/basic/btn_wide.png");
+        background-size: 100% 100%;
+        padding: 20px 15px;
+        font-family: "Joystix";
+        color: white;
+        text-align: center;
+        font-size: 1.8vh;
+
+    }
+    button{
+        margin-top: 10%;
+        width: 60%;
+        height: 10%;
+        background: url("../assets/btn_basic_basic_n.png"); 
+        background-size: 100% 100%;   
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Joystix";
+        color: white;
+        font-size: 3vh;
+        position: absolute;
+        bottom: 30px;
+    }
+}
