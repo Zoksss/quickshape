@@ -8,12 +8,24 @@ yourNickname.innerHTML = nickname;
 const nicknameInput = document.querySelector("#nicknameInput");
 const nicknameSubmit = document.querySelector("#nicknameSubmit");
 
+
+const hideShowNickname = (hide) => {
+    if(hide){
+
+        nicknameInput.parentElement.style.display = "none";
+        mainMenuSection.style.display = "flex";
+
+    }
+    else{
+        mainMenuSection.style.display = "none";
+    }
+}
 nicknameSubmit.addEventListener("click", () => {
     nickname = nicknameInput.value;
     yourNickname.innerHTML = nickname;
-    nicknameInput.parentElement.style.display = "none";
+    hideShowNickname(true)
 })
-
+hideShowNickname(false)
 
 
 let themesUnlocked = [

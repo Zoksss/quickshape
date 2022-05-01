@@ -159,7 +159,6 @@ body {
 }
 
 .nickname-selector {
-  background-image: url("../assets/themes/basic/back.png");
   height: 100vh;
   background-size: 100% 100%;
   width: 100%;
@@ -669,6 +668,10 @@ body .buttons .row button img {
   color: white;
   -webkit-text-stroke: 1px black;
   padding: 10px 5px;
+}
+
+.main-menu {
+  display: none;
 }
 
 .main-menu .main-menu-nav {
