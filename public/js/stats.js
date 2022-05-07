@@ -1,32 +1,16 @@
-let userCoins = 75;
-let userGems = 10;
-let nickname = "Player";
-topCoins.children[1].innerHTML = userCoins;
-topGems.children[1].innerHTML = userGems;
-yourNickname.innerHTML = nickname;
-
-const nicknameInput = document.querySelector("#nicknameInput");
-const nicknameSubmit = document.querySelector("#nicknameSubmit");
-
-
-const hideShowNickname = (hide) => {
-    if(hide){
-
+const hideShowNickname = () => {
         nicknameInput.parentElement.style.display = "none";
         mainMenuSection.style.display = "flex";
-
-    }
-    else{
-        mainMenuSection.style.display = "none";
-    }
+        
 }
 nicknameSubmit.addEventListener("click", () => {
     nickname = nicknameInput.value;
     yourNickname.innerHTML = nickname;
-    hideShowNickname(true)
+    saveData();
+    hideShowNickname();
 })
-hideShowNickname(false)
 
+let themesUnlockedArray = ["Basic"];
 
 let themesUnlocked = [
     {

@@ -1,33 +1,3 @@
-const pentagonBtn = document.querySelector("#pentagonBtn");
-const circleBtn = document.querySelector("#circleBtn");
-const triangleBtn = document.querySelector("#triangleBtn");
-const squareBtn = document.querySelector("#squareBtn");
-
-const currShapeImg = document.querySelector("#currShapeImg");
-const time = document.querySelector("#time");
-const round = document.querySelector("#round");
-const roundplustime = document.querySelector("#plustime");
-
-const startCounter = document.querySelector("#startCounter");
-const currRoundAverage = document.querySelector("#currRoundAverage");
-
-const mulCurrRoundAverage = document.querySelector("#mulCurrRoundAverage");
-const opponetAverageTitle = document.querySelector("#opponetAverageTitle");
-const opponetAverage = document.querySelector("#opponetAverage");
-const mulEndScreenCoins = document.querySelector("#mulEndScreenCoins");
-const mulEndScreenGems = document.querySelector("#mulEndScreenGems");
-
-const winnerText = document.querySelector("#winnerText");
-
-
-
-const topCoins = document.querySelector("#topCoins");
-const topGems = document.querySelector("#topGems");
-const yourNickname = document.querySelector("#yourNickname");
-
-
-const multiplayerEndScreen = document.querySelector("#multiplayerEndScreen");
-
 let currRound = 0;
 let prevShape = null;
 let currShape = null;
@@ -206,8 +176,11 @@ const checkIsCorrect = (shape) => {
                 mulEndScreenCoins.innerHTML = "+0";
                 mulEndScreenGems.innerHTML = "+0";
             }
+            saveData();
             topCoins.children[1].innerHTML = userCoins;
             topGems.children[1].innerHTML = userGems;
+
+            
         }
         gameplaySection.style.display = "none";
         // calculate times and coins

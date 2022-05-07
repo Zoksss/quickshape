@@ -1,6 +1,3 @@
-const themesUnlocedCounter = document.querySelector("#themesUnlocedCounter");
-const inventorySection = document.querySelector("#inventorySection");
-
 let themeCounter = 0;
 let el;
 const refreshInventory = () => {

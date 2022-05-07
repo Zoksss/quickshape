@@ -1,10 +1,3 @@
-const vsButton = document.querySelector("#vsButton");
-const multiplayerSearching = document.querySelector("#multiplayerSearching");
-const multiplayerCancelSearch = document.querySelector("#multiplayerCancelSearch");
-const multiplayerMatchFound = document.querySelector("#multiplayerMatchFound");
-
-
-
 vsButton.addEventListener("click", () => {
     mainMenuSection.style.display = "none";
     multiplayerSearching.style.display = "flex";

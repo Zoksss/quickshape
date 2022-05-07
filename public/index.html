@@ -186,26 +186,28 @@
         </div>
     </section>
     <span id="transitionHolder"></span>
+    
+    <script src="./js/dom.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-
-    <script>
-        let socket = io();
-        socket.on("connect", () => {
-            console.log("Connected to the server");
-        });
-        let opponetSent = false;
-        let yourReady = false;
-
-    </script>
-    <script src="./js/functions.js"></script>
-    <script src="./js/sceneManager.js"></script>
-    <script src="./js/mainGameplay.js"></script>
+    <script src="./js/inventory.js"></script>
     <script src="./js/themeManager.js"></script>
     <script src="./js/stats.js"></script>
+
+    <script src="./js/localstorage.js"></script>
+    
+    <script>
+        let socket = io();
+        let opponetSent = false;
+        let yourReady = false;
+        let userCoins = 75;
+        let userGems = 10;
+        let nickname = "Player";
+        loadData();
+    </script>
+    <script src="./js/sceneManager.js"></script>
+    <script src="./js/mainGameplay.js"></script>
     <script src="./js/shopHandler.js"></script>
-    <script src="./js/inventory.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="./js/socket.js"></script>
+    <script src="./js/socket.js" ></script>
 </body>
 
 </html>

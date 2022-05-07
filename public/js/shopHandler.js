@@ -1,11 +1,3 @@
-const themesShop1 = document.querySelector("#themesShop1");
-const themesShop2 = document.querySelector("#themesShop2");
-
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
-
 const generateShop = () => {
     let usedNumbers = [];
     themesShop1.innerHTML = "";
@@ -78,6 +70,8 @@ const buyTheme = (btn, name) => {
                     userGems -= themeObj.price;
                     topGems.children[1].innerHTML = userGems;
                     themeObj.unlocked = true;
+                    themesUnlockedArray.push(themeObj.name);
+                    saveData();
                     btn.innerHTML = `
                         <div class="theme-price">
                             <p id="shopThemePrice">Owned</p>
@@ -90,6 +84,8 @@ const buyTheme = (btn, name) => {
                     userCoins -= parseInt(themeObj.price);
                     topCoins.children[1].innerHTML = userCoins;
                     themeObj.unlocked = true;
+                    themesUnlockedArray.push(themeObj.name);
+                    saveData();
                     btn.innerHTML = `
                         <div class="theme-price">
                             <p id="shopThemePrice">Owned</p>

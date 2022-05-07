@@ -19,6 +19,15 @@ html {
 
 button {
   background-color: transparent !important;
+  -webkit-transition: 200ms all ease;
+  transition: 200ms all ease;
+  outline: none !important;
+  border: none !important;
+}
+
+button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 body {
@@ -175,9 +184,7 @@ body {
   color: white;
   position: relative;
   z-index: 9999;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

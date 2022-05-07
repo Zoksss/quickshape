@@ -17,6 +17,12 @@ html {
 
 button{
     background-color: transparent !important;
+    transition: 200ms all ease;
+    outline: none !important;
+    border: none !important;
+    &:hover{
+        transform: scale(1.05);
+    }
 }
 body {
     height: 100vh;

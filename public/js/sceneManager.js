@@ -1,25 +1,3 @@
-const endScreen = document.querySelector("#endScreen");
-const gameplaySection = document.querySelector("#gameplaySection");
-
-
-const playPage = document.querySelector("#playPage");
-const shopPage = document.querySelector("#shopPage");
-const inventoryPage = document.querySelector("#inventoryPage");
-
-
-const navPlayBtn = document.querySelector("#navPlayBtn");
-const navShopBtn = document.querySelector("#navShopBtn");
-const navInventorypBtn = document.querySelector("#navInventorypBtn");
-
-const playAgainBtn = document.querySelector("#playAgainBtn");
-
-const transitionHolder = document.querySelector("#transitionHolder");
-
-const startSingleplayerBtn = document.querySelector("#startSingleplayerBtn");
-const goToMenuBtn = document.querySelector("#goToMenuBtn");
-const mulGoToMenuBtn = document.querySelector("#mulGoToMenuBtn");
-
-const mainMenuSection = document.querySelector("#mainMenuSection");
 /*
 startSingleplayerBtn.addEventListener("click", () => {
     transitionHolder.classList.add("transition");
