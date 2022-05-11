@@ -17,6 +17,8 @@ class Room {
         this.leader = leader;
         this.player = "";
         this.isPlaying = false;
+        this.leaderNickname = "";
+        this.playerNickname = "";
     }
 }
 
@@ -24,8 +26,14 @@ let rooms = {};
 
 io.on("connection", (socket) => {
     console.log("Made socket connection with id: " + socket.id);
-    socket.on("startJoining", (nickname) => {
+    socket.on("updateNickname", (nickname) => {
+        // validate input
         socket.nickname = nickname;
+    });
+
+
+    socket.on("startJoining", () => {
+        console.log(socket.nickname);
         let room = searchForEmptyRoom();
         console.log(room);
         if (room) {
@@ -33,13 +41,17 @@ io.on("connection", (socket) => {
             socket.join(room.leader);
             rooms[room.leader].isPlaying = true;
             rooms[room.leader].player = socket.id;
+            rooms[room.leader].playerNickname = socket.nickname;
             console.log("joined");
-            io.in(room.leader).emit("startGame");
+            console.table(rooms[room.leader]);
+            io.in(room.leader).emit("startGame", [rooms[room.leader].leaderNickname, rooms[room.leader].playerNickname]);
         } else {
             // create new room
             rooms[socket.id] = new Room(socket.id);
             socket.join(socket.id);
+            rooms[socket.id].leaderNickname = socket.nickname;
             console.log("created");
+            console.table(rooms[socket.id]);
         }
     });
     socket.on("cancelSearch", () => {

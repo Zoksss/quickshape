@@ -12,7 +12,7 @@
             top: 0;
             left: 50%;
             transform: translate(-50%, 0);
-            width: 90%;
+            width: 96%;
             height: 100%;
             //display: flex;
             justify-content: center;
@@ -44,7 +44,8 @@
 
             .main-play {
                 width: 85%;
-                height: 38vh;
+                //height: 38vh;
+                aspect-ratio: 1/1;
                 margin: 10px auto;
                 background-image: url("../assets/center_field_basic_n.png");
                 background-position: center;

@@ -5,7 +5,7 @@
             top: 0;
             left: 50%;
             transform: translate(-50%, 0);
-            width: 90%;
+            width: 96%;
             height: 100%;
             //display: flex;
             //justify-content: center;
@@ -35,9 +35,10 @@
                 height: 25%;
                 margin-top: 20px;
                 button {
-                    width: 35%;
+                    width: 25%;
                     margin: 20px 5px;
-                    height: 100%;
+                    aspect-ratio: 9/16;
+                    //height: 100%;
                     background-image: url("../assets/placeholder.png");
                     background-size: 100% 100%;
                     background-color: transparent;

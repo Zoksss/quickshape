@@ -16,6 +16,9 @@ const opponetAverageTitle = document.querySelector("#opponetAverageTitle");
 const opponetAverage = document.querySelector("#opponetAverage");
 const mulEndScreenCoins = document.querySelector("#mulEndScreenCoins");
 const mulEndScreenGems = document.querySelector("#mulEndScreenGems");
+const multiplatyerYourNickname = document.querySelector("#multiplatyerYourNickname");
+
+const multiplatyerOpponetNickname = document.querySelector("#multiplatyerOpponetNickname");
 
 const winnerText = document.querySelector("#winnerText");
 

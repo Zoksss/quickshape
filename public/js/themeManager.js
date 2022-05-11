@@ -82,6 +82,15 @@ let themes = {
         "./assets/themes/dark/top.png",
         "./assets/themes/dark/line.png",
     ),
+    hacker: new Theme("Hacker",
+        "./assets/themes/hacker/back.png",
+        "./assets/themes/hacker/center.png",
+        "./assets/themes/hacker/btn.png",
+        "./assets/themes/hacker/btn_wide.png",
+        "./assets/themes/hacker/nav.png",
+        "./assets/themes/hacker/top.png",
+        "./assets/themes/hacker/line.png",
+    ),
 
 }
 
