@@ -83,5 +83,25 @@ let themesUnlocked = [
         gems: false,
         highValue: false,
         disabled: false
+    },
+    {
+        name: "Cherry",
+        placeholder: "./assets/themes_placeholders/cherry.png",
+        object: themes.cherry,
+        unlocked: false,
+        price: 10,
+        gems: false,
+        highValue: false,
+        disabled: false
+    },
+    {
+        name: "Japan",
+        placeholder: "./assets/themes_placeholders/japan.png",
+        object: themes.japan,
+        unlocked: false,
+        price: 10,
+        gems: false,
+        highValue: false,
+        disabled: false
     }
 ];

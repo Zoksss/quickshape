@@ -55,38 +55,37 @@ io.on("connection", (socket) => {
         }
     });
     socket.on("cancelSearch", () => {
-        
-    });
-    socket.on("multiplayerDisconnect", () => {
-
+        if (rooms[socket.id]) {
+            console.log("Deleting room " + socket.id);
+            delete rooms[socket.id];
+        }
     });
     socket.on("averageSend", time => {
-        //io.to(rooms[0]).emit("averageShare", time);
         let room = searchForRoomWhereUser(socket.id);
-        if(room){
-           socket.to(room.leader).emit("averageShare", time);
+        if (room) {
+            socket.to(room.leader).emit("averageShare", time);
         }
     });
 });
 
 const searchForEmptyRoom = () => {
     let isFound = null;
-    for (const key in rooms) {
+    for (const key in rooms)
         if (rooms[key].isPlaying === false) {
             isFound = rooms[key];
             break;
         }
-    }
+
     return isFound;
 }
 
 const searchForRoomWhereUser = (sockeid) => {
     let isFound = null;
-    for (const key in rooms) {
+    for (const key in rooms)
         if (rooms[key].player == sockeid || rooms[key].leader == sockeid) {
             isFound = rooms[key];
             break;
         }
-    }
+
     return isFound;
 }
