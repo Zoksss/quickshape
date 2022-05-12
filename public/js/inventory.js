@@ -13,7 +13,6 @@ const refreshInventory = () => {
             }
             let btn = document.createElement("button");
             btn.setAttribute("onclick", `inventorySetTheme("${themesUnlocked[i].name}")`)
-            btn.innerHTML = `<img src="${themesUnlocked[i].placeholder}">`
             btn.style.backgroundImage = `url("${themesUnlocked[i].placeholder}")`
             el.prepend(btn)
             themeCounter++;
