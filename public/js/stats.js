@@ -6,6 +6,7 @@ const hideShowNickname = () => {
 nicknameSubmit.addEventListener("click", () => {
     nickname = nicknameInput.value;
     yourNickname.innerHTML = nickname;
+    socket.emit("updateNickname", nickname);
     saveData();
     hideShowNickname();
 })
@@ -67,6 +68,36 @@ let themesUnlocked = [
         name: "Dark",
         placeholder: "./assets/themes_placeholders/dark.png",
         object: themes.dark,
+        unlocked: false,
+        price: 10,
+        gems: false,
+        highValue: false,
+        disabled: false
+    },
+    {
+        name: "Hacker",
+        placeholder: "./assets/themes_placeholders/hacker.png",
+        object: themes.hacker,
+        unlocked: false,
+        price: 10,
+        gems: false,
+        highValue: false,
+        disabled: false
+    },
+    {
+        name: "Cherry",
+        placeholder: "./assets/themes_placeholders/cherry.png",
+        object: themes.cherry,
+        unlocked: false,
+        price: 10,
+        gems: false,
+        highValue: false,
+        disabled: false
+    },
+    {
+        name: "Japan",
+        placeholder: "./assets/themes_placeholders/japan.png",
+        object: themes.japan,
         unlocked: false,
         price: 10,
         gems: false,

@@ -1,5 +1,6 @@
 
 const updateUI = () => {
+    socket.emit("updateNickname", nickname);
     topCoins.children[1].innerHTML = userCoins;
     topGems.children[1].innerHTML = userGems;
     yourNickname.innerHTML = nickname;

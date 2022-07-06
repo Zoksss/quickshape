@@ -10,8 +10,13 @@ multiplayerCancelSearch.addEventListener("click", () => {
     socket.emit("cancelSearch");
 });
 
-socket.on("startGame", () => {
+let opponetNickname = "Player";
+socket.on("startGame", (nicksData) => {
+    opponetNickname = (nicksData[0] === nickname) ? nicksData[1] : nicksData[0];
     console.log("starting game");
+    multiplatyerOpponetNickname.innerHTML = opponetNickname;
+    opponetAverageTitle.innerHTML = opponetNickname+":";
+    multiplatyerYourNickname.innerHTML = nickname + "(YOU)";
     multiplayerSearching.style.display = "none";
     multiplayerMatchFound.style.display = "flex";
     setTimeout(() => {
@@ -41,7 +46,7 @@ socket.on("averageShare", time => {
         let yourTimeNum = parseFloat(currRoundAverage.innerHTML);
         let opponetTimeNum = parseFloat(opponetAverage.innerHTML);
         if (yourTimeNum < opponetTimeNum) winnerText.innerHTML = "You won!";
-        else if (yourTimeNum > opponetTimeNum) winnerText.innerHTML = "Guest3904 won!";
+        else if (yourTimeNum > opponetTimeNum) winnerText.innerHTML = opponetNickname + " won!";
         else winnerText.innerHTML = "Tie!";
     }
 });

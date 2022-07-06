@@ -82,6 +82,33 @@ let themes = {
         "./assets/themes/dark/top.png",
         "./assets/themes/dark/line.png",
     ),
+    hacker: new Theme("Hacker",
+        "./assets/themes/hacker/back.png",
+        "./assets/themes/hacker/center.png",
+        "./assets/themes/hacker/btn.png",
+        "./assets/themes/hacker/btn_wide.png",
+        "./assets/themes/hacker/nav.png",
+        "./assets/themes/hacker/top.png",
+        "./assets/themes/hacker/line.png",
+    ),
+    cherry: new Theme("Cherry",
+        "./assets/themes/cherry/back.png",
+        "./assets/themes/cherry/center.png",
+        "./assets/themes/cherry/btn.png",
+        "./assets/themes/cherry/btn_wide.png",
+        "./assets/themes/cherry/nav.png",
+        "./assets/themes/cherry/top.png",
+        "./assets/themes/cherry/line.png",
+    ),
+    japan: new Theme("Japan",
+        "./assets/themes/japan/back.png",
+        "./assets/themes/japan/center.png",
+        "./assets/themes/japan/btn.png",
+        "./assets/themes/japan/btn_wide.png",
+        "./assets/themes/japan/nav.png",
+        "./assets/themes/japan/top.png",
+        "./assets/themes/japan/line.png",
+    ),
 
 }
 
@@ -108,6 +135,7 @@ let btnDOMArray = [ // css back
 let btnWideDOMArray = [ // css back
     document.querySelector("#vsButton"),
     document.querySelector("#mulGoToMenuBtn"),
+    document.querySelector("#multiplayerCancelSearch"),
 ]
 
 let topDOMArray = [ // css back

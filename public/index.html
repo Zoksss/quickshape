@@ -22,9 +22,9 @@
             <button class="multiplayer-cancel-btn" id="multiplayerCancelSearch">Cancel</button>
         </div>
         <div class="multiplayer-match-found" id="multiplayerMatchFound">
-            <p class="multiplayer-match-found-you">Zoks (you)</p>
+            <p class="multiplayer-match-found-you" id="multiplatyerYourNickname">Zoks (you)</p>
             <p class="multiplayer-match-found-vs">VS</p>
-            <p class="multiplayer-match-found-opponet">Guest3904</p>
+            <p class="multiplayer-match-found-opponet" id="multiplatyerOpponetNickname">Guest3904</p>
         </div>
     </section>
     <section class="main-menu" id="mainMenuSection">
@@ -89,8 +89,6 @@
                 </div>
                 <p class="themes-unlocked-value" id="themesUnlocedCounter">Your themes (0/0)</p>
                 <div class="inventory-themes-section" id="inventorySection">
-                    <div class="themes-unlocked-row">
-                    </div>
                     <div class="scroll-helper" id=""></div>
                 </div>
             </div>
@@ -200,7 +198,7 @@
         let socket = io();
         let opponetSent = false;
         let yourReady = false;
-        let userCoins = 75;
+        let userCoins = 75; 
         let userGems = 10;
         let nickname = "Player";
         loadData();
